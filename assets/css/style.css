@@ -1,0 +1,63 @@
+.menu {
+    background: linear-gradient(90deg, #021d9a 0%, #9e00ff 100%);
+    font-family: 'Consolas', sans-serif;
+    color: white;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    margin: 10;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+}
+li {
+    display: inline;
+}
+    a {
+        color: #ffffff;
+    }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #1A1E23;
+    font-family: "Lato", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+nav .line {
+    bottom: 0;
+    background: #FF1847;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    margin: 0 40px 0 0;
+    opacity: 0.4;
+    transition: all 0.4s ease;
+}
+nav ul li:hover {
+    opacity: 0.7;
+}
+nav ul li.active {
+    opacity: 1;
+}
+nav ul li:last-child {
+    margin-right: 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    font-size: 14px;
+}
+
