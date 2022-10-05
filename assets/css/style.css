@@ -1,4 +1,5 @@
 .menu {
+    border-radius: 25px;
     background: linear-gradient(90deg, #021d9a 0%, #9e00ff 100%);
     font-family: 'Consolas', sans-serif;
     color: white;
@@ -13,8 +14,10 @@
 
 }
 .headerimage {
+    border-radius: 25px;
     position: relative;
     display: block;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto }
 
