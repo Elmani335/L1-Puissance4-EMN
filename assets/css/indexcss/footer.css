@@ -1,0 +1,60 @@
+.global {
+    background-color: #04142e;
+    color: white;
+}
+
+strong {
+    /* color: rgb(218, 113, 9); */
+    color: #07a880;
+}
+
+.global > .row > .col > .copy{
+   margin-top: 70px;
+   font-size: 1.5rem;
+   color: rgb(239, 220, 48);
+}
+.global p, i {
+    font-size: 0.8rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.global ul {
+    padding-left: 0%;
+    list-style: none;
+}
+
+.global ul li {
+    list-style-position: inside;
+    margin-top: 15px;
+}
+
+.global a {
+    color: white;
+    text-decoration: none;
+}
+
+.global ul li::before {
+    content: "◼︎";
+    color: #07a880;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.row h1 {
+    color: #07a880;
+}
+
+
+i {
+    color: white;
+    color: #07a880;
+    width: max-content;
+    padding: .25rem;
+    border-radius: .45rem;
+    font-size: 1rem;
+    display: inline-flex;
+}
