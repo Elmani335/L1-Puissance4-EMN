@@ -2,13 +2,13 @@
     background: #f2f2f2;
     font-family: 'Consolas', sans-serif;
     color: white;
-    background: linear-gradient(90deg, #063094 0%, #5b1dd9 100%);
+    background: linear-gradient(90deg, rgb(39, 39, 112) 0%, rgb(39, 39, 112) 100%);
     color: #fff;
     list-style: none;
     display: flex;
     justify-content: center;
     color: #ffffff;
-    top: 10px;
+    top: 0px;
     position: sticky;
     width: 100%; /* Full width */
     transition: top 0.3s; /* Transition effect when sliding down (and up) */
@@ -79,7 +79,7 @@ nav ul li a {
 }
 
 .main {
-    background-image: url("../../images/jezael-melgoza-uxAS2W_fZnU-unsplash.jpg");
+    background-image: url("/assets/images/3161.jpg");
     background-size: cover;
     width: 100%;
     height: 400px;
