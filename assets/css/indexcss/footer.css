@@ -1,0 +1,69 @@
+.global {
+    background-color:hsl(207, 90%, 72%) ;
+    color: black;
+    padding-top: 55px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+}
+
+.col strong {
+    /* color: rgb(218, 113, 9); */
+    color: black;
+}
+
+.global > .row > .col > .copy{
+   margin-top: 70px;
+   font-size: 1rem;
+   color: black;
+}
+.global p, i {
+    font-size: 1.25rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.global ul {
+    padding-left: 0%;
+    list-style: none;
+}
+
+.global ul li {
+    list-style-position: inside;
+    margin-top: 15px;
+}
+
+.global a {
+    color: black;
+    text-decoration: none;
+}
+
+.global ul li::before {
+    content: "◼︎";
+    color: black
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.row h1 {
+    color: black;
+}
+
+
+.col i {
+    color: black;
+    width: max-content;
+    padding: 0.2rem;
+    border-radius: .45rem;
+    font-size: 1.6rem;
+    display: inline-flex;
+}
+
+.col i:hover {
+    background-color:black;
+    color: hsl(207, 90%, 72%);
+    border-radius: 0.2rem;
+    transition: 0.6s;
+}

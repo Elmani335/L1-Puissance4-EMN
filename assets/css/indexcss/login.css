@@ -1,0 +1,44 @@
+body {
+    height: 80px;
+    background-size: cover;
+    background-image:url("https://imgs.search.brave.com/hrRQ_bcUtvT3KDfwSCldxxcvZBfz5XLYGJALmhYKplM/rs:fit:1200:1080:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzbXVnLmNv/bS9kb3dubG9hZC8x/OTIweDEwODAvOTVk/ZGI4L2N5YmVyLW91/dHJ1bi12YXBvcndh/dmUtYXJ0LmpwZw");
+  }
+  
+.connexion {
+    display: flex;
+    text-align: center;
+    color: rgb(68, 74, 225);
+    flex-direction: column;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 35px;
+}
+  
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.nav a{
+    color: rgb(0, 0, 0);
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+  
+.nav > li{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+  
+  
+.login {
+    text-decoration: none;
+    overflow: hidden;
+    text-transform: uppercase;
+}
