@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    background-color: hsl(221deg 46% 8%);
+
+}
+
+#container {
+    background-color: hsl(221deg 46% 8%); 
+    width: 1014px;
+    text-align: center;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+.p1 {
+    color: white;
+}
+
+.image-description > strong {
+    font-size: 3rem;
+    color: hsl(207, 90%, 72%) ;
+    margin-right: 30px;
+}
+
+.image-description3 > strong {
+    text-align: start;
+    font-size: 3rem;
+    color: hsl(207, 90%, 72%) ;
+    justify-content: start;
+    margin-right: 30px;
+    margin-top: 0px;
+}
+
+.images {
+    padding-top: 40px;
+    display: flex;
+}
+
+.caption {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 150px;
+    color: white;
+    width: 1014px;
+    text-align: start;
+}
+
+.image-description {
+    width: 338px;
+    display: block;
+    margin-right: 40px;
+}
+
+.image-description3 {
+    width: 338px;
+    display: block;
+}
+  
+.image {
+    margin: 0;
+    flex: 1;
+}
+  
+.image + .image {
+    margin-left: 15px;
+}
+
+.image > .image-item1 {
+    width: 470Px;
+    height: 250px;
+}
+  
+  
+.image > .image-item2 {
+    width: 257Px;
+    height: 250px;
+}
+
+.image > .image-item3 {
+        width: 257Px;
+        height: 250px;
+}
+
+.caption figcaption {
+    display: flex;
+    float: right;
+    text-align: start;
+}
+
+.container2 {
+    color: white;
+    display: flex;
+    margin-bottom: 100px;
+
+}
+
+.container2 img {
+    width: 470Px;
+    height: 290px;
+    padding-right: 30px;
+}
+
+.container2-texte {
+    display: grid;
+    grid-template-columns: 240px 240px; /* Taille des colonnes */
+    grid-template-rows: auto auto; /* Pour avoir deux rangées */
+
+    grid-gap: 30px; /* Distance entre les cellules */
+    grid-auto-flow: column; /* En colonnes pas rangées */
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+
+}
+
+.container2-div1 {
+    background-color:rgb(39, 39, 112) ;
+    border-radius: 3px;
+}
+
+.container2-div3 {
+    background-color:rgb(14, 79, 71) ;
+    border-radius: 3px;
+}
+
+.container2-div2 {
+    background-color:rgb(112, 39, 92) ;
+    border-radius: 3px;
+}
+
+.container2-div4 {
+    background-color:rgb(142, 91, 40) ;
+    border-radius: 3px;
+}
+
+.equipe {
+    color: white;
+    text-align: center;
+}
+
+
+.equipe h1 {
+    text-align: center;
+    margin: 10px auto;
+    max-width: 550px;
+    position: relative;
+    color: hsl(207, 90%, 72%) ;
+    font-size: 4rem;
+}
+
+.equipe > h1:before {
+    background-color: hsl(207, 90%, 72%) ;
+    display: block;
+    width: 240px;
+    height: 2px;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    
+}
+
+.equipe > h1:after {
+    background-color: hsl(207, 90%, 72%) ;
+    display: block;
+    width: 240px;
+    height: 2px;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    
+}
+
+.text-equipe {
+    display: flex;
+    padding-top: 35px;
+    padding-bottom: 150px;
+    color: white;
+    width: 1014px;
+    text-align: start;
+    margin-right: 20px;
+}
+
+.text-equipe i {
+    color: hsl(207, 90%, 72%) ;
+    width: max-content;
+    padding: 0.3rem;
+    border-radius: .45rem;
+    font-size: 1.6rem;
+    margin-bottom: 50px;
+}
+
+.text-equipe i:hover {
+    background-color:hsl(207, 90%, 72%) ;
+    color: black;
+    border-radius: 0.2rem;
+    transition: 0.6s;
+}
+
+.equipier1, .equipier2, .equipier3 {
+    width: 378px;
+    text-align: center;
+    background-color: rgb(39, 39, 112);
+    border-radius: 5%;
+}
+
+.text-equipe > .equipier1, .equipier2 {
+    margin-right: 20px;
+}
+
+.text-equipe img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding-top: 35px;
+}
