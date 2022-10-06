@@ -1,21 +1,24 @@
 .global {
-    background-color: #04142e;
-    color: white;
+    background-color:hsl(207, 90%, 72%) ;
+    color: black;
+    padding-top: 55px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
 }
 
-strong {
+.col strong {
     /* color: rgb(218, 113, 9); */
-    color: #07a880;
+    color: black;
 }
 
 .global > .row > .col > .copy{
    margin-top: 70px;
-   font-size: 1.5rem;
-   color: rgb(239, 220, 48);
+   font-size: 1rem;
+   color: black;
 }
 .global p, i {
-    font-size: 0.8rem;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.25rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 .global ul {
@@ -29,13 +32,13 @@ strong {
 }
 
 .global a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
 .global ul li::before {
     content: "◼︎";
-    color: #07a880;
+    color: black
 }
 
 .row {
@@ -45,16 +48,22 @@ strong {
 }
 
 .row h1 {
-    color: #07a880;
+    color: black;
 }
 
 
-i {
-    color: white;
-    color: #07a880;
+.col i {
+    color: black;
     width: max-content;
-    padding: .25rem;
+    padding: 0.2rem;
     border-radius: .45rem;
-    font-size: 1rem;
+    font-size: 1.6rem;
     display: inline-flex;
+}
+
+.col i:hover {
+    background-color:black;
+    color: hsl(207, 90%, 72%);
+    border-radius: 0.2rem;
+    transition: 0.6s;
 }
