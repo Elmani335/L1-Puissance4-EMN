@@ -1,0 +1,21 @@
+.menu {
+    text-align: center;
+    color: blanchedalmond;
+    border-top: auto;
+    background-image: url(https://imgs.search.brave.com/1FgQD2PmxTA1IKJ2X4sxLHrMMM1O_W9UMe3sD8AO2Hg/rs:fit:1200:1080:1/g:ce/aHR0cHM6Ly93d3cu/d2FsbHBhcGVydGlw/LmNvbS93bWltZ3Mv/MTEtMTE5NTA0X2Zs/YXNoLWxvZ28td2l0/aC1saWdodG5pbmcu/anBn);
+    -ms-flex-align: ;
+    align-items: center;
+}
+
+
+h1 {
+    color: black;
+}
+h2 {
+    color: red;
+    
+
+}
+
+
+
