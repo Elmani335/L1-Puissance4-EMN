@@ -30,7 +30,7 @@
             </div>
             <div>
                 <div class="container">
-                    <h3 class="animate-headtext">SCORES PAGES</h3>
+                    <h3 class="animate-headtext">CHAT</h3>
                 </div>
                 <div>
 
@@ -40,35 +40,25 @@
     </header>
 </div>
 
-<div class="scores">
+<div class="chat">
+    <div id="wrapperchat">
+        <div id="menuchat">
+            <p class="welcome">Welcome, <b></b></p>
+            <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+        </div>
 
-    <table class="styled-table">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Points</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr  class="active">
-            <td>Elman</td>
-            <td>Infinite</td>
-        </tr>
-        <tr class="normal">
-            <td>Pierre</td>
-            <td>5150</td>
-        </tr>
-        <tr class="normal">
-            <td>Roger</td>
-            <td>1473</td>
-        </tr>
-        <tr class="normal">
-            <td>Jack</td>
-            <td>3524</td>
-        </tr>
-        <!-- and so on... -->
-        </tbody>
-    </table>
+        <div id="chatbox"></div>
+
+        <form name="message" action="">
+            <input name="usermsg" type="text" id="usermsg" />
+            <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
+        </form>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // jQuery Document
+        $(document).ready(function () {});
+    </script>
 
 </div>
 
