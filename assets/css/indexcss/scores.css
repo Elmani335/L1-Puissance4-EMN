@@ -1,0 +1,46 @@
+body {
+    background: linear-gradient(45deg, #9c0aa4 0%, #74FDFDFF 100%);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 50px auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #4f0a98;
+    color: #ffffff;
+    text-align: center;
+    /* BAR HEADER DU TABLEAU */
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 15px 150px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 2px solid #4f0a98;
+    /* COULEUR SEPARATEUR DES LIGNES */
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background: linear-gradient(45deg, #74fdfd 0%, #dc0551 100%);
+    /* ALTERNANCE COULEUR 2 */
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #ffffff;
+    /* COULEUR DE LA BAR BAS DU TABLEAU */
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #76f4f7;
+    /* COULEUR DE LA PERSONNE ACTIVE */
+}
