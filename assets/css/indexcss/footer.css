@@ -11,6 +11,10 @@
     color: black;
 }
 
+.col2 a:hover {
+    color: rgb(255, 255, 255);
+}
+
 .global > .row > .col > .copy{
    margin-top: 70px;
    font-size: 1rem;
