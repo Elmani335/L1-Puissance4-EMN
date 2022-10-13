@@ -1,24 +1,34 @@
-h1 {
-    text-align: center;
-    color: #0034ff;
+
+html {
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat ;
+    background-image: linear-gradient(60deg, #030303, #525251);
+    font-family: Bahnschrift;
 }
 
-* {
-    margin: 0;
-    padding: 0;
+h1 {
+    font-size: 50px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 body {
-    margin: 20px auto;
+    padding: 25px;
+
     font-family: "Lato";
     font-weight: 300;
 }
 
 form {
-    padding: 15px 40%;
+    max-width: 500px;
+    margin: 10px 40%;
     display: flex;
-    gap: 10px;
+    gap: 5px;
     justify-content: center;
+    align-items: center;
 }
 
 form label {
@@ -41,13 +51,14 @@ a:hover {
 
 .chatwrapper,
 #loginform {
-    margin: 0 auto;
-    padding-bottom: 25px;
-    background: #eee;
-    width: 600px;
+
+    font-weight: bold;
+    font-family: Bahnschrift;
+    margin: 50px auto;
+    padding-bottom: 0px;
+    background-image: linear-gradient(60deg, #3353d3, #220f4b);
     max-width: 100%;
-    border: 2px solid #212121;
-    border-radius: 4px;
+    border-radius: 50px;
 }
 
 #loginform {
@@ -56,45 +67,51 @@ a:hover {
 }
 
 #loginform p {
-    padding: 15px 25px;
+    padding: 10px 0px;
     font-size: 1.4rem;
     font-weight: bold;
 }
 
 #chatbox {
+
+    font-weight: bold;
+    font-family: Bahnschrift;
     text-align: left;
     margin: 0 auto;
     margin-bottom: 25px;
     padding: 10px;
-    background: #fff;
+    background-image: linear-gradient(60deg, #4daebe, #5b08c9);
     height: 300px;
     width: 530px;
-    border: 1px solid #a7a7a7;
     overflow: auto;
     border-radius: 4px;
-    border-bottom: 4px solid #a7a7a7;
+
 }
 
 #usermsg {
+    width: 395px;
+    height: 30px;
     flex: 1;
-    border-radius: 4px;
-    border: 1px solid #ff9800;
+    border: 1px solid #000000;
+    font-size: 1.2rem;
+    font-family: Bahnschrift;
 }
 
 #name {
     border-radius: 4px;
-    border: 1px solid #ff9800;
+    border: 1px solid #ffffff;
     padding: 2px 8px;
 }
 
 #submitmsg,
 #enter{
-    background: #ff9800;
-    border: 2px solid #e65100;
-    color: white;
+    background: #000000;
+    border: 2px solid #ffffff;
+    color: #ffffff;
     padding: 4px 10px;
     font-weight: bold;
     border-radius: 4px;
+    font-family: Bahnschrift;
 }
 
 .error {
@@ -102,8 +119,10 @@ a:hover {
 }
 
 #chatmenu {
-    padding: 15px 25px;
+    font-family: Bahnschrift;
+    padding: 15px 40%;
     display: flex;
+
 }
 
 #chatmenu p.welcome {
@@ -120,6 +139,7 @@ a#exit {
 
 .msgln {
     margin: 0 0 5px 0;
+    width: 300px;
 }
 
 .msgln span.left-info {
@@ -127,14 +147,15 @@ a#exit {
 }
 
 .msgln span.chat-time {
-    color: #666;
+    color: #ffffff;
     font-size: 60%;
+    font-weight: bold;
     vertical-align: super;
 }
 
 .msgln b.user-name, .msgln b.user-name-left {
     font-weight: bold;
-    background: #546e7a;
+    background: #6e0000;
     color: white;
     padding: 2px 4px;
     font-size: 90%;
@@ -143,5 +164,49 @@ a#exit {
 }
 
 .msgln b.user-name-left {
-    background: orangered;
+    background: #000000;
+    font-family: Bahnschrift;
+    font-style: italic;
 }
+
+.chatwrapper,
+#loginform {
+    --border-width: 3px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 20%;
+    font-family: Lato, sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+    background: #222;
+    border-radius: var(--border-width);
+}
+.chatwrapper,
+#loginform::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(60deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0);
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 2s alternate infinite;
+}
+
+@keyframes moveGradient {
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+
+
+
