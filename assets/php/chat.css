@@ -1,3 +1,8 @@
+h1 {
+    text-align: center;
+    color: #0034ff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +15,7 @@ body {
 }
 
 form {
-    padding: 15px 25px;
+    padding: 15px 40%;
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -34,7 +39,7 @@ a:hover {
     text-decoration: underline;
 }
 
-#wrapperchat,
+.chatwrapper,
 #loginform {
     margin: 0 auto;
     padding-bottom: 25px;
@@ -96,12 +101,12 @@ a:hover {
     color: #ff0000;
 }
 
-#menuchat {
+#chatmenu {
     padding: 15px 25px;
     display: flex;
 }
 
-#menuchat p.welcome {
+#chatmenu p.welcome {
     flex: 1;
 }
 

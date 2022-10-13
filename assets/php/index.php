@@ -2,10 +2,23 @@
 
 session_start();
 
+$blacklist = file('blacklist.txt', FILE_IGNORE_NEW_LINES);
+
+$ip = isset($_SERVER['REMOTE_ADDR']) ? trim($_SERVER['REMOTE_ADDR']) : '';
+
+if (($key = array_search($ip, $blacklist)) !== false) {
+    http_response_code(403);
+    echo trim('
+    <!DOCTYPE html><html><head><title>403</title></head><body>403 Error</body></html>
+');
+    exit();
+
+}
+
 if(isset($_GET['logout'])){
 
     //Simple exit message
-    $logout_message = "<div class='msgln'><span class='left-info'>User <b class='user-name-left'>". $_SESSION['name'] ."</b> has left the chat session.</span><br></div>";
+    $logout_message = "<div class='msgln'><span class='chat-time'>".date("F j, Y, g:i a")."</span><span class='left-info'>User <b class='user-name-left'>". $_SESSION['name'] ."</b> has left the chat session. </span><br></div>";
     file_put_contents("log.html", $logout_message, FILE_APPEND | LOCK_EX);
 
     session_destroy();
@@ -40,8 +53,9 @@ function loginForm(){
     <head>
         <meta charset="utf-8" />
 
-        <title>Tuts+ Chat Application</title>
-        <meta name="description" content="Tuts+ Chat Application" />
+        <title>WEB LIVE CHAT</title>
+        <meta name="viewport" content="width=500, initial-scale=0.0, maximum-scale=1.0">
+        <meta name="description" content="Chat" />
         <link rel="stylesheet" href="chat.css" />
     </head>
 <body>
@@ -51,10 +65,10 @@ if(!isset($_SESSION['name'])){
 }
 else {
     ?>
-    <div id="wrapperchat">
-        <div id="menuchat">
+    <div id="chatwrapper">
+        <div id="chatmenu">
             <p class="welcome">Welcome, <b><?php echo $_SESSION['name']; ?></b></p>
-            <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+            <p class="logout"><a id="exit" href="../../index.html">Exit Chat</a></p>
         </div>
 
         <div id="chatbox">
@@ -100,7 +114,7 @@ else {
                 });
             }
 
-            setInterval (loadLog, 2500);
+            setInterval (loadLog, 500);
 
             $("#exit").click(function () {
                 var exit = confirm("Are you sure you want to end the session?");
