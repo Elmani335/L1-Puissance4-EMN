@@ -4,7 +4,7 @@
     <list default="true" id="0315d8de-5a53-4669-af4b-9c85a96073aa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sql/webdata.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sql/webdata.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sql/request.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sql/request.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
