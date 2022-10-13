@@ -56,12 +56,13 @@ function loginForm(){
         <title>WEB LIVE CHAT</title>
         <meta name="viewport" content="width=500, initial-scale=0.0, maximum-scale=1.0">
         <meta name="description" content="Chat" />
-        <link rel="stylesheet" href="chat.css" />
+        <link rel="stylesheet" href="../css/indexcss/chat.css" />
     </head>
 <body>
 <?php
 if(!isset($_SESSION['name'])){
     loginForm();
+
 }
 else {
     ?>
