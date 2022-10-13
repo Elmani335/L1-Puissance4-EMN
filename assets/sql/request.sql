@@ -1,10 +1,27 @@
+-- Story 3
+
 --password reset request--
-SELECT mdp FROM utilisateurs
-UPDATE mdp
-SET mdp = 'newpassword'
-WHERE email = 'ffsfssfs'
 
-
+UPDATE utilisateurs SET mdp = '' WHERE id ='' ;
+ 
 --email reset request--
-SELECT  email FROM utilisateurs WHERE utilisateurs = 'toto' AND mdp = '123456'
-SET email FROM utilisateurs WHERE utilisateurs = 'toto' AND mdp = '123456'
+
+UPDATE utilisateurs SET email = '' WHERE id ='' AND mdp = '';
+
+-- Story 4
+
+SELECT * FROM utilisateurs WHERE email = '' AND mdp = ''
+THEN
+    CONNECT
+ELSE
+    ERROR
+
+-- Story 5
+
+INSERT INTO jeu (id, 'nom_jeu')
+ VALUES
+ ('id', 'Power Of Memory');
+
+-- Story 6 
+
+SELECT 'id_joueur','id_jeu','difficulty','score' FROM score
