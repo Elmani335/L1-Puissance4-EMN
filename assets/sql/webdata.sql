@@ -5,66 +5,65 @@ SET time_zone = "+00:00";
 
 -- Story 1 crée table utilisateur / score / message / jeu  --
 
-DROP TABLE IF EXISTS 'utilisateur';
 
-CREATE TABLE IF NOT EXISTS utilisateurs (
 
-    id varchar(40) NOT NULL,
-    email varchar(60) NOT NULL,
-    mdp varchar(40) NOT NULL,
-    pseudo varchar(40) NOT NULL,
-    date_heure_inscription datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    date_heure_derniere_connexion datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY ('id')
+CREATE TABLE utilisateurs (
+
+    `id` int(11) NOT NULL,
+    `email` varchar(60) NOT NULL,
+    `mdp` varchar(40) NOT NULL,
+    `pseudo` varchar(40) NOT NULL,
+    `date_heure_inscription` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `date_heure_derniere_connexion` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`)
 
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
 
 
-CREATE TABLE IF NOT EXISTS 'score' (
+CREATE TABLE score (
 
-    `id` varchar(40) NOT NULL,
-    `id_joueur` varchar(40) NOT NULL,
-    `id_jeu` varchar(40) NOT NULL,
-    `difficulty` int(1) NOT NULL AUTO_INCREMENT,
-    `score` int(10) NOT NULL AUTO_INCREMENT,
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `id_joueur` int(11) NOT NULL,
+    `id_jeu` int(11) NOT NULL,
+    `difficulty` int(1) NOT NULL,
+    `score` int(10) NOT NULL,
     `date-heure_partie` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY ('id')
+    PRIMARY KEY (`id`)
 
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
 
 
-CREATE TABLE IF NOT EXISTS 'message-chat' (
+CREATE TABLE `message-chat` (
 
-    `id` varchar(40) NOT NULL,
-    `id_jeu` varchar(40) NOT NULL,
-    `identifiant_expediteur` varchar(40) NOT NULL,
-    `message` varchar(200) NOT NULL,
+    `id` int(11) NOT NULL,
+    `id_jeu` int(11) NOT NULL,
+    `identifiant_expediteur` int(11) NOT NULL,
+    `message` text(200) NOT NULL,
     `date_heure_message` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY ('id')
+    PRIMARY KEY (`id`)
 
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
 
 
-CREATE TABLE IF NOT EXISTS 'jeu' (
+CREATE TABLE jeu (
 
-    `id` varchar(40) NOT NULL,
+    `id` int(11) NOT NULL,
     `nom_jeu` varchar(40) NOT NULL,
-    PRIMARY KEY ('id')
+    PRIMARY KEY (`id`)
 
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
 
--- Story 2
+-- Story 2 --
 
 
-CREATE TABLE IF NOT EXISTS 'inscription' (
-
+CREATE TABLE inscription (
+	`id` int(11) NOT NULL,
     `email` varchar(40) NOT NULL,
     `mdp` varchar(40) NOT NULL,
     `pseudo` varchar(40) NOT NULL,
     `date_heure_inscription` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY ('id')
+    PRIMARY KEY (`id`)
 
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
 
--- Story 3
-
+-- Story 3 --
