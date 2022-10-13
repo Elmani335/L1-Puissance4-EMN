@@ -3,23 +3,22 @@ SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
--- Story 1
+-- Story 1 crée table utilisateur / score / message / jeu  --
 
 DROP TABLE IF EXISTS 'utilisateur';
 
 CREATE TABLE IF NOT EXISTS utilisateurs (
 
-    `identifiant` varchar(40) NOT NULL,
-    `email`varchar(60) NOT NULL,
-    `mdp` varchar(40) NOT NULL,
-    `pseudo` varchar(40) NOT NULL,
-    `date-heure-inscription` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    `date-heure-derniere-connexion` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    identifiant varchar(40) NOT NULL,
+    email varchar(60) NOT NULL,
+    mdp varchar(40) NOT NULL,
+    pseudo varchar(40) NOT NULL,
+    date-heure-inscription datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    date-heure-derniere-connexion datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY ('id')
 
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
 
-DROP TABLE IF EXISTS 'score';
 
 CREATE TABLE IF NOT EXISTS 'score' (
 
@@ -33,7 +32,6 @@ CREATE TABLE IF NOT EXISTS 'score' (
 
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
 
-DROP TABLE IF EXISTS 'message-chat';
 
 CREATE TABLE IF NOT EXISTS 'message-chat' (
 
@@ -46,7 +44,6 @@ CREATE TABLE IF NOT EXISTS 'message-chat' (
 
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
 
-DROP TABLE IF EXISTS 'jeu';
 
 CREATE TABLE IF NOT EXISTS 'jeu' (
 
@@ -58,7 +55,6 @@ CREATE TABLE IF NOT EXISTS 'jeu' (
 
 -- Story 2
 
-DROP TABLE IF EXISTS 'inscription';
 
 CREATE TABLE IF NOT EXISTS 'inscription' (
 
@@ -71,3 +67,4 @@ CREATE TABLE IF NOT EXISTS 'inscription' (
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
 
 -- Story 3
+
