@@ -25,7 +25,7 @@
         <div class="controls-container">
           <p id="result"></p>
           <button id="start">Start Game</button>
-          <a id="button-retour-jeu" href="index.html">Home</a>
+          <a id="button-retour-jeu" href="index.php">Home</a>
         </div>
     </div>
         <!-- Script du jeu -->

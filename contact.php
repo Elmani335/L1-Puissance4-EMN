@@ -17,13 +17,13 @@
             <div class="menu">
                 <nav>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="assets/php/login.php">Login</a></li>
-                        <li><a href="assets/php/register.php">Inscription</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="MyPage.php">Inscription</a></li>
+                        <li><a href="about.php">Login</a></li>
                         <li class="active"><a href="contact.html">Contact</a></li>
-                        <li><a href="jeu.html">Jeu</a></li>
-                        <li><a href="scores.html">Scores</a></li>
-                        <li><a href="assets/php/index.php">Chat</a></li>
+                        <li><a href="jeu.php">Jeu</a></li>
+                        <li><a href="scores.php">Scores</a></li>
+                        <li><a href="chat.php">Chat</a></li>
                     </ul>
                 </nav>
             </div>

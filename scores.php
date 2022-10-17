@@ -1,3 +1,11 @@
+<?php
+
+echo "Hello World";
+include 'assets/php/header.php';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,13 +29,13 @@
       <div class="menu">
         <nav>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="assets/php/login.php">Login</a></li>
-            <li><a href="assets/php/register.php">Inscription</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="jeu.html">Jeu</a></li>
+            <li ><a href="index.php">Home</a></li>
+            <li><a href="MyPage.php">Inscription</a></li>
+            <li><a href="about.php">Login</a></li>
+            <li><a href="contact.php">Contact</a></li>
+            <li><a href="jeu.php">Jeu</a></li>
             <li class="active"><a href="scores.html">Scores</a></li>
-            <li><a href="assets/php/index.php">Chat</a></li>
+            <li><a href="chat.php">Chat</a></li>
           </ul>
         </nav>
       </div>
@@ -104,7 +112,7 @@
               <a href="scores.html" class="footer_link">Les scores</a>
             </li>
             <li>
-              <a href="contact.html" class="footer_link">Nous contacter</a>
+              <a href="contact.php" class="footer_link">Nous contacter</a>
             </li>
           </ul>
         </div>

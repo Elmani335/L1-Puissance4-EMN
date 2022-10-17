@@ -98,12 +98,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../css/indexcss/footer.css">
-    <link rel="stylesheet" href="../css/indexcss/1.css">
-    <link rel="stylesheet" href="../css/indexcss/contact.css">
+    <link rel="stylesheet" href="../../css/indexcss/footer.css">
+    <link rel="stylesheet" href="../../css/indexcss/1.css">
+    <link rel="stylesheet" href="../../css/indexcss/contact.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/indexcss/header.css">
-    <link rel="stylesheet" href="../css/indexcss/mypage.css">
+    <link rel="stylesheet" href="../../css/indexcss/header.css">
+    <link rel="stylesheet" href="../../css/indexcss/mypage.css">
     <meta charset="UTF-8">
     <title>MyPage</title>
 </head>
@@ -112,13 +112,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="menu">
             <nav>
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../assets/php/login.php">Login</a></li>
-                    <li class="../active"><a href="assets/php/register.php">Inscription</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                    <li><a href="../jeu.html">Jeu</a></li>
-                    <li><a href="../scores.html">Scores</a></li>
-                    <li><a href="../assets/php/index.php">Chat</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="MyPage.php">Inscription</a></li>
+                    <li><a href="about.php">Login</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="jeu.php">Jeu</a></li>
+                    <li><a href="scores.php">Scores</a></li>
+                    <li><a href="chat.php">Chat</a></li>
                 </ul>
             </nav>
         </div>

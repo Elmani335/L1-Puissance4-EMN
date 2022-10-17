@@ -1,3 +1,9 @@
+<?php
+
+include_once 'assets/php/loginsyst/login.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,26 +13,21 @@
     <link rel="stylesheet" href="assets/css/indexcss/1.css">
     <link rel="stylesheet" href="assets/css/indexcss/login.css">
     <link rel="stylesheet" href="assets/css/indexcss/scores.css">
-
-
     <title>Scores</title>
 </head>
-
 <body>
-
-
 <header>
     <div class="header">
         <div class="menu">
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="assets/php/login.php">Login</a></li>
-                    <li><a href="assets/php/register.php">Inscription</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="jeu.html">Jeu</a></li>
-                    <li><a href="scores.html">Scores</a></li>
-                    <li><a href="assets/php/index.php">Chat</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="MyPage.php">Inscription</a></li>
+                    <li class="active"><a href="about.php">Login</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="jeu.php">Jeu</a></li>
+                    <li><a href="scores.php">Scores</a></li>
+                    <li><a href="chat.php">Chat</a></li>
                 </ul>
             </nav>
 
@@ -34,11 +35,33 @@
 </div>
 </header>
 
-<form action="post" class="form">
-    <input type="text" placeholder="Email :" class="inscription-holder">
-    <input type="text" placeholder="Mot de passe :" class="inscription-holder">
-    <a href="Connexion">Connexion</a>
-</form>
+<div class="wrapper">
+    <h2>Login</h2>
+    <p>Please fill in your credentials to login.</p>
+
+    <?php
+    if(!empty($login_err)){
+        echo '<div class="alert alert-danger">' . $login_err . '</div>';
+    }
+    ?>
+
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+            <span class="invalid-feedback"><?php echo $username_err; ?></span>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+            <span class="invalid-feedback"><?php echo $password_err; ?></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="Login">
+        </div>
+        <p>Don't have an account? <a href="MyPage.php">Sign up now</a>.</p>
+    </form>
+</div>
 </div>
 
 
@@ -70,7 +93,7 @@
                     <a href="scores.html" class="footer_link">Les scores</a>
                 </li>
                 <li>
-                    <a href="contact.html" class="footer_link">Nous contacter</a>
+                    <a href="contact.php" class="footer_link">Nous contacter</a>
                 </li>
             </ul>
         </div>

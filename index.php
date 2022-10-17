@@ -7,7 +7,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="assets/css/indexcss/1.css">
     <link rel="stylesheet" href="assets/css/indexcss/main.css">
-
+    
     <title>Website</title>
 
 </head>
@@ -18,13 +18,13 @@
             <div class="menu">
                 <nav>
                     <ul>
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="assets/php/login.php">Login</a></li>
-                        <li><a href="assets/php/register.php">Inscription</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="jeu.html">Jeu</a></li>
-                        <li><a href="scores.html">Scores</a></li>
-                        <li><a href="assets/php/index.php">Chat</a></li>
+                        <li class="active"><a href="index.php">Home</a></li>
+                        <li><a href="MyPage.php">Inscription</a></li>
+                        <li><a href="about.php">Login</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                        <li><a href="jeu.php">Jeu</a></li>
+                        <li><a href="scores.php">Scores</a></li>
+                        <li><a href="chat.php">Chat</a></li>
                     </ul>
                 </nav>
             </div>
@@ -33,37 +33,36 @@
                     <h3 class="animate-headtext">BIENVENUE SUR NOTRE SITE</h3>
                 </div>
                 <div>
-
+                    
                 </div>
             </div>
-        </div>
         </header>
     </div>
-
+       
         <div id="container">
 
-
-
+        
+        
             <div class="images">
                 <figure class="image">
                     <img class="image-item1" src="assets/images/2635205.jpg" alt="">
                 </figure>
-
+                
                 <figure class="image">
                     <img class="image-item2" src="assets/images/3161.jpg" alt="">
                 </figure>
-
+                
                 <figure class="image">
                     <img class="image-item3" src="assets/images/cool-geometric-triangular-figure-in-neon-laser-light-great-for-backgrounds.jpg" alt="">
                 </figure>
             </div>
-
+    
             <div class="caption">
                 <figcaption class="image-description"> <strong>01 </strong>  LOREM IPSUM <br/><br> Consectetur adipisicing elit. Quidem commodi maiores et officiis quisquam quasi id labore, iure voluptatum cupiditate ex vero aliquam fugiat quos neque magnam dicta. Animi, saepe.</figcaption>
                 <figcaption class="image-description"> <strong>02 </strong>  LOREM IPSUM <br/><br> Consectetur adipisicing elit. Quidem commodi maiores et officiis quisquam quasi id labore, iure voluptatum cupiditate ex vero aliquam fugiat quos neque magnam dicta. Animi, saepe.</figcaption>
                 <figcaption class="image-description3"> <strong>03 </strong>  LOREM IPSUM <br/><br> Consectetur adipisicing elit. Quidem commodi maiores et officiis quisquam quasi id labore, iure voluptatum cupiditate ex vero aliquam fugiat quos neque magnam dicta. Animi, saepe.</figcaption>
             </div>
-
+            
             <div class="container2">
                 <div class="container2-img">
                     <img src="assets/images/luminous-metaverse-background.jpg" alt="">
@@ -86,17 +85,17 @@
                         <p><strong>Joueurs inscrits</strong></p>
                     </div>
                 </div>
-
+    
             </div>
-
+    
             <div class="equipe">
-
+    
                 <h2>NOTRE EQUIPE</h2>
                 <p>Iure voluptatum cupiditate ex vero aliquam fugiat quos neque magnam dicta</p>
                 <h1>⎊</h1>
-
+    
             </div>
-
+    
             <div class="text-equipe">
                 <div class="equipier1">
                     <img src="assets/images/3.jpg" alt="">
@@ -125,9 +124,9 @@
             </div>
          </div>
     <footer class="global">
-
+    
         <div class="row">
-
+    
             <div class="col">
                 <h1>Informations</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
@@ -141,7 +140,7 @@
                 <a href=""> <i class='bx bxl-twitter'></i></a>
                 <p class="copy">Copyright @ tout droits réservés</p>
             </div>
-
+    
             <div class="col2">
                 <h1>Power Of Memory</h1>
                         <ul>
@@ -152,14 +151,14 @@
                                 <a href="scores.html" class="footer_link">Les scores</a>
                             </li>
                             <li>
-                                <a href="contact.html" class="footer_link">Nous contacter</a>
+                                <a href="contact.php" class="footer_link">Nous contacter</a>
                             </li>
                         </ul>
-            </div>
-
+            </div> 
+          
         </div>
-
+    
     </footer>
-
+                
 </body>
 </html>

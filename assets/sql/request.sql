@@ -37,4 +37,4 @@ INSERT INTO message_chat VALUES ('id', 'id_jeu', 'identifiant_expediteur', 'mess
 
 -- Story 10 --
 
-SELECT 'id_jeu','identifiant_expediteur','message','date_heure_message' FROM message_chat AND jeu AND utilisateurs
+SELECT 'message','identifiant_expediteur','date_heure_message' FROM message_chat,utilisateurs THEN IF ('date_heure_message' > 'date_heure_message')
