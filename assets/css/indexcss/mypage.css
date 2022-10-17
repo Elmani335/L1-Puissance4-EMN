@@ -1,51 +1,19 @@
-.inscription-container {
-    background-color: hsl(221deg 46% 8%); 
+
+
+h2 {
+    margin: 10px 30px;
+    font-size: 2.5rem;
+}
+body {
+    justify-content: center;
+
+}
+.wrapper {
+    margin-right: auto;
+    margin-left: auto;
     width: 500px;
-    margin-right: 00px;
-    margin-left: 430px;
-    font-family: 'Poppins', sans-serif;
-    padding-top: 130px;
-    padding-bottom: 130px;
-}
-
-.inscription-holder {
-    border: 1px solid black;
-    border-radius: 2px;
-    transition: all 0.5s ease;
-    color: black;
-}
-
-.inscription-holder:focus {
-    background-color: rgb(39, 39, 112);
+    display: flex;
+    border: 2px solid white;
     color: white;
-}
-
-.inscription-formulaire input[type=submit] {
-    background-color: hsl(207, 90%, 72%);
-    border: 4px solid hsl(207, 90%, 72%);
-    border-radius: 5%;
-    color: black;
-    cursor: pointer;
-}
-
-.inscription-formulaire input[type=submit]:hover {
-    color: hsl(207, 90%, 72%) ;
-    background-color: rgb(39, 39, 112);
-    border: 4px solid rgb(39, 39, 112);
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-.inscription-holder::placeholder {
-    color: hsl(207, 90%, 72%);
-    font-family: 'Poppins', sans-serif;
-    padding: 1rem;
-    text-align: start;
-    cursor: pointer;
-}
-
-.inscription-holder {
-    width: 500px;
-    height: 30px;
-    margin-bottom: 15px;
+    font-family: Bahnschrift;
 }

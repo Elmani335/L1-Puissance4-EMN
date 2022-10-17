@@ -47,8 +47,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate password
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter a password.";
-    } elseif(strlen(trim($_POST["password"])) < 6){
-        $password_err = "Password must have atleast 6 characters.";
+    } elseif(strlen(trim($_POST["password"])) < 8){
+        $password_err = "Password must have atleast 8 characters.";
     } else{
         $password = trim($_POST["password"]);
     }
@@ -80,7 +80,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
-                header("location: login.php");
+                header("location: ../about.php");
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
             }
@@ -94,66 +94,3 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     mysqli_close($link);
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="../../css/indexcss/footer.css">
-    <link rel="stylesheet" href="../../css/indexcss/1.css">
-    <link rel="stylesheet" href="../../css/indexcss/contact.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../../css/indexcss/header.css">
-    <link rel="stylesheet" href="../../css/indexcss/mypage.css">
-    <meta charset="UTF-8">
-    <title>MyPage</title>
-</head>
-<header>
-    <div class="header">
-        <div class="menu">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="MyPage.php">Inscription</a></li>
-                    <li><a href="about.php">Login</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                    <li><a href="jeu.php">Jeu</a></li>
-                    <li><a href="scores.php">Scores</a></li>
-                    <li><a href="chat.php">Chat</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
-<div class="titre-contacter">
-    <h1 class="animate-headtext">INSCRIPTION</h1>
-</div>
-
-<body>
-<div class="wrapper">
-    <h2>Sign Up</h2>
-    <p>Please fill this form to create an account.</p>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <div class="form-group">
-            <label>Username</label>
-            <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-            <span class="invalid-feedback"><?php echo $username_err; ?></span>
-        </div>
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
-            <span class="invalid-feedback"><?php echo $password_err; ?></span>
-        </div>
-        <div class="form-group">
-            <label>Confirm Password</label>
-            <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
-            <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
-        </div>
-        <div class="form-group">
-            <input type="submit" class="btn btn-primary" value="Submit">
-            <input type="reset" class="btn btn-secondary ml-2" value="Reset">
-        </div>
-        <p>Already have an account? <a href="login.php">Login here</a>.</p>
-    </form>
-</div>
-</body>
-</html>

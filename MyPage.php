@@ -9,7 +9,6 @@ include_once 'assets/php/loginsyst/register.php';
     <link rel="stylesheet" href="assets/css/indexcss/footer.css">
     <link rel="stylesheet" href="assets/css/indexcss/1.css">
     <link rel="stylesheet" href="assets/css/indexcss/contact.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="assets/css/indexcss/header.css">
     <link rel="stylesheet" href="assets/css/indexcss/mypage.css">
     <meta charset="UTF-8">
@@ -21,8 +20,8 @@ include_once 'assets/php/loginsyst/register.php';
                 <nav>
                     <ul>
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="MyPage.php">Inscription</a></li>
-                        <li class="active"><a href="about.php">Login</a></li>
+                        <li class="active"><a href="MyPage.php">Inscription</a></li>
+                        <li><a href="about.php">Login</a></li>
                         <li><a href="contact.php">Contact</a></li>
                         <li><a href="jeu.php">Jeu</a></li>
                         <li><a href="scores.php">Scores</a></li>
@@ -39,7 +38,6 @@ include_once 'assets/php/loginsyst/register.php';
 <body>
 <div class="wrapper">
     <h2>Sign Up</h2>
-    <p>Please fill this form to create an account.</p>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <div class="form-group">
             <label>Username</label>
