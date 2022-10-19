@@ -1,6 +1,5 @@
 <?php
 
-echo "Hello World";
 include 'assets/php/header.php';
 
 ?>
