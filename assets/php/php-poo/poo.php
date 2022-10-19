@@ -26,7 +26,7 @@ session_start();
     ?>
     <h1>Test perso vie</h1>
     <?php
-    $perso1 = new Personnage(100, 110, 10);
+    $perso1 = new Personnage(100, 50, 10);
     $perso2 = new Personnage(100, 10, 10);
     ?>
     <p>Le personnage 1 a
@@ -39,7 +39,7 @@ session_start();
         <?php echo $perso2->getForce(); ?> points de force.
         <?php echo $perso2->getDef(); ?> points de def.
     </p>
-    <?php $perso1->frapper($perso2); echo 'avec une force de :';  ?>
+    <?php $perso1->frapper($perso2); echo 'avec une force de : '; echo $?>
     <p>Le personnage 1 a frappé le personnage 2</p>
     <p>Le personnage 2 a maintenant <?php echo $perso2->getVie();?> points de vie
         <?php

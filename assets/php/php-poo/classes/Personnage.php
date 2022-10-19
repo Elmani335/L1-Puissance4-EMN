@@ -4,9 +4,9 @@ class Personnage
 {
 //Crée 2 personnages avec 100 points de vie chacun, une force de 20, et une defence de 10, faire en sorte d'attaquer un personnage et changer ses point de vie en fonction de la force et de la defense de l'autre personnage
 
-    private $vie = 100;
-    private $force = 20;
-    private $defense = 10;
+    private $vie = 1;
+    private $force = 1;
+    private $defense = 1;
 
     public function setVie($vie)
     {
@@ -37,9 +37,6 @@ class Personnage
     public function getDef() {
         return $this->defense;
     }
-    
+
 }
-
-
-
 ?>

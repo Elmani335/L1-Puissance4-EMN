@@ -1,8 +1,4 @@
-<?php
 
-include 'assets/php/header.php';
-
-?>
 
 
 <!DOCTYPE html>
