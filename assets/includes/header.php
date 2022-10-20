@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="assets/css/indexcss/1.css">
     <link rel="stylesheet" href="assets/css/indexcss/main.css">
 
-    <title><?php echo 'test' ?></title>
+    <title><?php echo '.' ?></title>
+    <script src="../assets/js/title.js"></script>
 
 </head>
 <body>
