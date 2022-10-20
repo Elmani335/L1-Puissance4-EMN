@@ -11,36 +11,37 @@ include_once 'assets/includes/header.php';
     <div class="container">
         <h3 class="animate-headtext">LOGIN</h3>
     </div>
-    <div>
-
-    </div>
 </div>
 
-<div class="wrapper">
-    <h2>Login</h2>
-    <p>Please fill in your credentials to login.</p>
+<div class="login_wrapper">
+    <p class="txtfillin">Please fill in your credentials to login.</p>
 
     <?php
     if(!empty($login_err)){
-        echo '<div class="alert alert-danger">' . $login_err . '</div>';
+        echo '<div class="alert-danger">' . $login_err . '</div>';
     }
     ?>
+    <span class="invalid-feedback-user"><?php echo $username_err; ?></span>
+    <span class="invalid-feedback-pass"><?php echo $password_err; ?></span>
 
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <div class="form-group">
-            <label>Username</label>
-            <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-            <span class="invalid-feedback"><?php echo $username_err; ?></span>
+            <label id="labeluser">Username</label>
+            <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>" id="formuser">
+
         </div>
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
-            <span class="invalid-feedback"><?php echo $password_err; ?></span>
+        <div class="form-password">
+            <label id="labelpass">Password</label>
+            <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" id="formpass">
+            <br>
+
         </div>
-        <div class="form-group">
-            <input type="submit" class="btn btn-primary" value="Login">
+        <div class="form-submit">
+            <input type="submit" class="btn btn-primary" value="LOGIN" id="subbtn">
         </div>
+        <div class="signup">
         <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+        </div>
     </form>
 </div>
 </div>

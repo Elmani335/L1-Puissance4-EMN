@@ -1,1 +1,103 @@
 
+.txtfillin {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: Bahnschrift;
+    font-size: 20px;
+    margin: 10px 10px 10px 10px;
+}
+
+#labeluser {
+    margin: 25px 5px 5px 10px;
+}
+
+#labelpass {
+    margin: 25px 5px 5px 10px;
+}
+
+.login_wrapper {
+    color: white;
+}
+
+.form-group {
+    justify-content: center;
+    display: flex;
+    color: #ffffff;
+    font-family: Bahnschrift;
+    font-size: 20px;
+    margin: 10px 10px 10px 10px;
+}
+
+.form-submit {
+    justify-content: center;
+    display: flex;
+    font-family: Bahnschrift;
+    font-size: 20px;
+}
+
+#formuser {
+    background-image: linear-gradient(to right, #0fe4f3, #6c10c5);
+    color: #ffffff;
+    padding: 1% 1%;
+    margin: 1% 1%;
+    border: solid #ffffff;
+    border-width: 3px 3px;
+}
+#formpass {
+    background-image: linear-gradient(to right, #0fe4f3, #6c10c5);
+    color: black;
+    padding: 1% 1%;
+    margin: 1% 1%;
+    border: solid #ffffff;
+    border-width: 3px 3px;
+}
+#subbtn {
+    font-weight: bold;
+    background-image: linear-gradient(to right, #0fe4f3, #6c10c5);
+    color: black;
+    width: 100px;
+    padding: 1% 1%;
+    margin: 1% 1%;;
+    border: solid #ffffff;
+    border-width: 3px 3px;
+}
+
+.form-password {
+    justify-content: center;
+    display: flex;
+    font-family: Bahnschrift;
+    font-size: 20px;
+}
+
+.alert-danger {
+    justify-content: center;
+    display: flex;
+    font-family: Bahnschrift;
+    font-size: 20px;
+    color: red;
+}
+
+.signup {
+    justify-content: center;
+    display: flex;
+    font-family: Bahnschrift;
+    font-size: 20px;
+}
+
+.invalid-feedback-user {
+
+    justify-content: center;
+    display: flex;
+    font-family: Bahnschrift;
+    font-size: 20px;
+    color: red;
+
+}
+.invalid-feedback-pass {
+    justify-content: center;
+    display: flex;
+    font-family: Bahnschrift;
+    font-size: 20px;
+    color: red;
+}

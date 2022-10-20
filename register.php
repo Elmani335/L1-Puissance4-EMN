@@ -7,24 +7,32 @@ include_once 'assets/includes/header.php';
         <div class="titre-contacter">
             <h1 class="animate-headtext">INSCRIPTION</h1>
         </div>
+
+
+
 <body>
-<div class="wrapper">
+<div class="register_wrapper">
+
+    <span class="invalid-feedback-user"><?php echo $username_err; ?></span>
+    <span class="invalid-feedback-pass"><?php echo $password_err; ?></span>
+    <span class="invalid-feedback-conpass"><?php echo $confirm_password_err; ?></span>
+
     <h2>Sign Up</h2>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <div class="form-group">
-            <label>Username</label>
-            <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-            <span class="invalid-feedback"><?php echo $username_err; ?></span>
+            <label id="labeluser">Username</label>
+            <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>" id="formuser">
+
         </div>
         <div class="form-group">
-            <label>Password</label>
-            <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
-            <span class="invalid-feedback"><?php echo $password_err; ?></span>
+            <label id="labelpass">Password</label>
+            <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" id="formpass">
+
         </div>
         <div class="form-group">
             <label>Confirm Password</label>
             <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
-            <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+
         </div>
         <div class="form-group">
             <input type="submit" class="btn btn-primary" value="Submit">
