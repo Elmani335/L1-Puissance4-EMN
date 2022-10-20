@@ -1,24 +1,30 @@
 .global {
-    background-color:hsl(207, 90%, 72%) ;
+    background-image: linear-gradient(135deg, #8900FA, #0985CC);
     color: black;
     padding-top: 55px;
     font-family: 'Poppins', sans-serif;
     font-size: 1.25rem;
 }
-
+/* TEL EMAIL LOC. COLOR */
 .col strong {
     /* color: rgb(218, 113, 9); */
-    color: black;
+    color: #9b9b9b;
 }
-
+/* power of memory columns COLOR ON HOVER */
 .col2 a:hover {
-    color: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    background-image: linear-gradient(135deg, #56009b, #1d00d7);
+    border-radius: 20px;
+    padding-inline: 10px 15px;
+    transition-duration: 100ms;
 }
 
+/* COPYRIGHT COLOR */
 .global > .row > .col > .copy{
    margin-top: 70px;
    font-size: 1rem;
-   color: black;
+   color: #ffffff;
 }
 .global p, i {
     font-size: 1.25rem;
@@ -34,9 +40,9 @@
     list-style-position: inside;
     margin-top: 15px;
 }
-
+/* power of memory columns COLOR */
 .global a {
-    color: black;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -50,24 +56,7 @@
     justify-content: center;
     justify-content: space-around;
 }
-
+/* TITLES COLOR */
 .row h1 {
-    color: black;
-}
-
-
-.col i {
-    color: black;
-    width: max-content;
-    padding: 0.2rem;
-    border-radius: .45rem;
-    font-size: 1.6rem;
-    display: inline-flex;
-}
-
-.col i:hover {
-    background-color:black;
-    color: hsl(207, 90%, 72%);
-    border-radius: 0.2rem;
-    transition: 0.6s;
+    color: #ffffff;
 }
