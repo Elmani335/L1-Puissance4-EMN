@@ -3,7 +3,7 @@ include_once 'assets/php/loginsyst/register.php';
 include_once 'assets/includes/header.php';
 ?>
 
-
+    <link href="assets/css/indexcss/register.css" rel="stylesheet">
         <div class="titre-contacter">
             <h1 class="animate-headtext">INSCRIPTION</h1>
         </div>

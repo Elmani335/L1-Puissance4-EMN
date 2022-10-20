@@ -1,12 +1,4 @@
 
-html {
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat ;
-    background-image: linear-gradient(60deg, #030303, #525251);
-    font-family: Bahnschrift;
-}
-
 h1 {
     font-size: 50px;
     color: #ffffff;
@@ -15,11 +7,11 @@ h1 {
     margin-bottom: 20px;
 }
 
-body {
-    padding: 25px;
-
-    font-family: "Lato";
-    font-weight: 300;
+.welcome {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    font-family: Bahnschrift;
 }
 
 form {
@@ -132,9 +124,14 @@ a:hover {
 a#exit {
     color: white;
     background: #c62828;
-    padding: 4px 8px;
+    padding: 12px 10px;
     border-radius: 4px;
+    margin-right: auto;
+    margin-left: auto;
     font-weight: bold;
+    justify-content: center;
+    display: flex;
+    max-width: 100px;
 }
 
 .msgln {

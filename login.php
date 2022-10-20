@@ -6,7 +6,7 @@ include_once 'assets/includes/header.php';
 ?>
 
 <body>
-
+<link href="assets/css/indexcss/login.css" rel="stylesheet">
 <div>
     <div class="container">
         <h3 class="animate-headtext">LOGIN</h3>

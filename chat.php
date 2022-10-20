@@ -1,6 +1,7 @@
 <?php
 include_once 'assets/includes/header.php';
 ?>
+    <link href="assets/css/indexcss/chat.css" rel="stylesheet">
 <div>
     <div class="container">
         <h3 class="animate-headtext">CHAT</h3>
@@ -11,7 +12,7 @@ include_once 'assets/includes/header.php';
     <div id="wrapperchat">
         <div id="menuchat">
             <p class="welcome">Welcome, <b></b></p>
-            <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+            <p class="logout"><a id="exit" href="index.php">Exit Chat</a></p>
         </div>
 
         <div id="chatbox"></div>

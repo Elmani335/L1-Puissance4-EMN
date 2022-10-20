@@ -1,6 +1,7 @@
 <?php
 include_once 'assets/includes/header.php';
 ?>
+    <link href="assets/css/indexcss/scores.css" rel="stylesheet">
       <div>
         <div class="container">
           <h3 class="animate-headtext">SCORES PAGES</h3>

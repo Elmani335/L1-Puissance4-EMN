@@ -3,6 +3,7 @@ include_once 'assets/includes/header.php';
 ?>
 
 <body>
+<link href="assets/css/indexcss/contact.css" rel="stylesheet">
     <div class="titre-contacter">
         <h1 class="animate-headtext">NOUS CONTACTER</h1>
     </div>
