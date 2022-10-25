@@ -1,9 +1,14 @@
-
-
 h2 {
-    margin: 10px 30px;
+    
     font-size: 2.5rem;
+    text-align: center;
 }
+
+form > p {
+    text-align: center;
+    
+}
+
 body {
     justify-content: center;
 
@@ -11,39 +16,70 @@ body {
 .register_wrapper {
     margin-right: auto;
     margin-left: auto;
-    width: 500px;
-    display: flex;
-    border: 2px solid white;
-    color: white;
+    width: 400px;
+    display: block;
+    color: hsl(207, 90%, 72%);
     font-family: Bahnschrift;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: rgb(39, 39, 112);
+    padding: 20px;
+    border-radius: 10%;
 }
 
 
 .txtfillin {
     display: flex;
     justify-content: center;
-    color: white;
+    color: hsl(207, 90%, 72%);
     font-family: Bahnschrift;
     font-size: 20px;
     margin: 10px 10px 10px 10px;
 }
 
 #labeluser {
-    margin: 25px 5px 5px 10px;
+    margin: 10px 5px 5px 10px;
 }
 
 #labelpass {
-    margin: 25px 5px 5px 10px;
+    margin: 10px 5px 5px 10px;
 }
 
 
 .form-group {
-    justify-content: center;
     display: flex;
-    color: #ffffff;
+    color: hsl(207, 90%, 72%);
     font-family: Bahnschrift;
     font-size: 20px;
-    margin: 10px 10px 10px 10px;
+    
+}
+
+.form-group1 {
+    display: flex;
+    color: hsl(207, 90%, 72%);
+    font-family: Bahnschrift;
+    font-size: 20px;
+    padding-left: 4px;
+}
+
+.form-group2 {
+    display: flex;
+    color: hsl(207, 90%, 72%);
+    font-family: Bahnschrift;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-left: 15px;
+    
+}
+input[type=password] {
+    margin-left: 7px;
+    padding-right: 10px;
+}
+
+.form-group3 {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
 }
 
 .form-submit {
@@ -60,6 +96,7 @@ body {
     margin: 1% 1%;
     border: solid #ffffff;
     border-width: 3px 3px;
+    height: 30px;
 }
 #formpass {
     background-image: linear-gradient(to right, #0fe4f3, #6c10c5);
@@ -68,16 +105,18 @@ body {
     margin: 1% 1%;
     border: solid #ffffff;
     border-width: 3px 3px;
+    height: 30px;
 }
 #subbtn {
     font-weight: bold;
     background-image: linear-gradient(to right, #0fe4f3, #6c10c5);
     color: black;
     width: 100px;
-    padding: 1% 1%;
-    margin: 1% 1%;;
+    padding-left:8px ;
     border: solid #ffffff;
     border-width: 3px 3px;
+    width: 200px;
+    height: 40px;
 }
 
 .form-password {
@@ -105,24 +144,36 @@ body {
 .invalid-feedback-user {
 
     justify-content: center;
-    display: flex;
+    padding-left: 10px;
+    margin-top: 15px;
     font-family: Bahnschrift;
-    font-size: 20px;
+    font-size: 15px;
     color: red;
 
 }
 .invalid-feedback-pass {
     justify-content: center;
-    display: flex;
+    padding-left: 10px;
+    margin-top: 17px;
     font-family: Bahnschrift;
-    font-size: 20px;
+    font-size: 15px;
     color: red;
 }
 
 .invalid-feedback-conpass {
     justify-content: center;
-    display: flex;
+    padding-left: 10px;
+    margin-top: 5px;
     font-family: Bahnschrift;
-    font-size: 20px;
+    font-size: 15px;
     color: red;
 }
+
+form {
+    padding: auto;
+}
+
+a {
+    color: white;
+}
+

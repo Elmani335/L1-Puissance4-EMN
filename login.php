@@ -14,7 +14,7 @@ include_once 'assets/includes/header.php';
 </div>
 
 <div class="login_wrapper">
-    <p class="txtfillin">Please fill in your credentials to login.</p>
+    <p class="txtfillin">Connexion</p>
 
     <?php
     if(!empty($login_err)){
