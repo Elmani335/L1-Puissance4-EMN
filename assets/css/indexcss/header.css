@@ -79,11 +79,10 @@ nav ul li a {
 }
 
 .main {
-    background-image: url("/assets/images/3161.jpg");
+    background-image: url("../../images/3161.jpg");
     background-size: cover;
     width: 100%;
     height: 400px;
     background-position: 200px;
-
 }
 

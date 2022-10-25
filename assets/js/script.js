@@ -1,173 +1,234 @@
-const moves = document.getElementById("moves-count");
-const timeValue = document.getElementById("time");
-const startButton = document.getElementById("start");
-const stopButton = document.getElementById("stop");
-const gameContainer = document.querySelector(".game-container");
-const result = document.getElementById("result");
-const controls = document.querySelector(".controls-container");
-let cards;
-let interval;
-let firstCard = false;
-let secondCard = false;
-// Array des objets
-const items = [
-  { name: "bee", image: "/assets/images/image-jeu-1.jpg"},
-  { name: "crocodile", image: "/assets/images/image-jeu-2.jpg"},
-  { name: "macaw", image: "/assets/images/image-jeu-3.jpg"},
-  { name: "gorilla", image: "/assets/images/image-jeu-4.jpg" },
-  { name: "tiger", image: "/assets/images/image-jeu-5.jpg" },
-  { name: "monkey", image: "/assets/images/image-jeu-6.jpg" },
-  { name: "chameleon", image: "/assets/images/image-jeu-7.jpg" },
-  { name: "piranha", image: "/assets/images/image-jeu-8.jpg" },
-  { name: "anaconda", image: "/assets/images/image-jeu-9.jpg" },
-  { name: "sloth", image: "/assets/images/image-jeu-10.jpg" },
-  { name: "cockatoo", image: "/assets/images/image-jeu-11.jpg" },
-  { name: "toucan", image: "/assets/images/image-jeu-12.jpg" },
-];
-// Temps initial
-let seconds = 0,
-  minutes = 0;
-// Coups initaux + timer
-let movesCount = 0,
-  winCount = 0;
-// For timer
-const timeGenerator = () => {
-  seconds += 1;
-  // logiique des minutes
-  if (seconds >= 60) {
-    minutes += 1;
-    seconds = 0;
-  }
-  // Format du temps
-  let secondsValue = seconds < 10 ? `0${seconds}` : seconds;
-  let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
-  timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
-};
-// Calcul des coups
-const movesCounter = () => {
-  movesCount += 1;
-  moves.innerHTML = `<span>Moves:</span>${movesCount}`;
-};
-// Selectionne un item du array
-const generateRandom = (size = 4) => {
-  //temporary array
-  let tempArray = [...items];
-  // Initialise la valeur de la carte
-  let cardValues = [];
-  // Initialise la taille
-  size = (size * size) / 2;
-  // Selection de l'objet
-  for (let i = 0; i < size; i++) {
-    const randomIndex = Math.floor(Math.random() * tempArray.length);
-    cardValues.push(tempArray[randomIndex]);
-    // On sort l'objet de l'array
-    tempArray.splice(randomIndex, 1);
-  }
-  return cardValues;
-};
-const matrixGenerator = (cardValues, size = 4) => {
-  gameContainer.innerHTML = "";
-  cardValues = [...cardValues, ...cardValues];
+const icons = ['ambulance', 'anchor', 'balance-scale', 'basketball-ball', 'bath', 'bed', 'beer', 'bicycle', 'binoculars', 'bomb', 'bug', 'car', 'chess-rook', 'chess-queen', 'cloud', 'fighter-jet', 'fire', 'gamepad', 'home', 'sun', 'volleyball-ball', 'chess-knight'];
+const board = document.querySelector('.game-board');
+const reset = document.getElementById('reset');
+const replay = document.getElementById('replay');
+const form = document.getElementById('form');
+const difficulties = document.querySelectorAll("input[name='difficulty']");
+const timer = document.getElementById('timer');
+const ratingPerfect = document.getElementById('rating-perfect');
+const ratingAverage = document.getElementById('rating-average');
+const cardContainers = document.querySelectorAll('.card-container');
+const modal = document.querySelector('.modal');
+let clickCount = 0;
+let selectedCards = [];
+let iconClasses, sec, moves, wrongMoves, correctMoves, difficulty, difficultyClass, setTimer;
 
-  cardValues.sort(() => Math.random() - 0.5);
-  for (let i = 0; i < size * size; i++) {
-    /*
-        Je crée la carte
-        before = le dos de la carte
-        after = l'image
-        data-card-values store la valeur et le nom de la carte pour détecter la carte plus tard
-      */
-    gameContainer.innerHTML += `
-     <div class="card-container" data-card-value="${cardValues[i].name}">
-        <div class="card-before">?</div>
-        <div class="card-after">
-        <img src="${cardValues[i].image}" class="image"/></div>
-     </div>
-     `;
-  }
-  // Grid
-  gameContainer.style.gridTemplateColumns = `repeat(${size},auto)`;
-  // Cards
-  cards = document.querySelectorAll(".card-container");
-  cards.forEach((card) => {
-    card.addEventListener("click", () => {
-      // Si la carte selectionner n'est pas match alors le script run
-      if (!card.classList.contains("matched")) {
-        // On retourne la carte selectionnée
-        card.classList.add("flipped");
-        // si c'est la première carte alors valeur = false
-        if (!firstCard) {
-          // la carte actuelle va devenir la première carte
-          firstCard = card;
-          // la valeur de "CurrentCrd" devient "firstCardValue"
-          firstCardValue = card.getAttribute("data-card-value");
-        } else {
-          // On incrémente le move quand le joueur selectionne la deuxième carte
-          movesCounter();
-          //secondCard and value
-          secondCard = card;
-          let secondCardValue = card.getAttribute("data-card-value");
-          if (firstCardValue == secondCardValue) {
-            // Si les deux cartes sont similaires on ajoute la class "matched" pour qu'elles soient ignorées dans le futur
-            firstCard.classList.add("matched");
-            secondCard.classList.add("matched");
-            // On initialise "firstCard" a false puisque la prochaine carte sera initialisé a first
-            firstCard = false;
-            // "winCount" incrémente quand le joueur trouve une paire
-            winCount += 1;
-            // check si "winCount" == moitié de "cardValues"
-            if (winCount == Math.floor(cardValues.length / 2)) {
-              result.innerHTML = `<h2>You Won</h2>
-            <h4>Moves: ${movesCount}</h4>`;
-              stopGame();
-            }
-          } else {
-            // si la carte est pas similaire
-            // on retourne la carte de dos
-            let [tempFirst, tempSecond] = [firstCard, secondCard];
-            firstCard = false;
-            secondCard = false;
-            let delay = setTimeout(() => {
-              tempFirst.classList.remove("flipped");
-              tempSecond.classList.remove("flipped");
-            }, 900);
-          }
-        }
-      }
-    });
-  });
-};
-// Start game
-startButton.addEventListener("click", () => {
-  movesCount = 0;
-  seconds = 0;
-  minutes = 0;
-  // controles et boutons visibilité
-  controls.classList.add("hide");
-  stopButton.classList.remove("hide");
-  startButton.classList.add("hide");
-  // Début timer
-  interval = setInterval(timeGenerator, 1000);
-  // initial moves
-  moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
-  initializer();
+//shuffle function from https://bost.ocks.org/mike/shuffle/
+function shuffle(array) {
+	var m = array.length, t, i;
+	while (m) {
+		i = Math.floor(Math.random() * m--);
+		t = array[m];
+		array[m] = array[i];
+		array[i] = t;
+	}
+}
+
+// go over the radio buttons and check the difficulty selection
+function checkDifficulty(){
+	[].forEach.call(difficulties, function(input){
+		input.nextElementSibling.classList.remove('checked');
+		console.log(input.nextElementSibling)
+		if (input.value === 'easy' && input.checked === true) {
+			difficulty = 4;
+			difficultyClass = 'easy';
+			input.nextElementSibling.classList.add('checked');
+		} else if (input.value === 'normal' && input.checked === true) {
+			difficulty = 16;
+			difficultyClass = 'normal';
+			input.nextElementSibling.classList.add('checked');
+		} else if (input.value === 'hard' && input.checked === true) {
+			difficulty = 36;
+			difficultyClass = 'hard';
+			input.nextElementSibling.classList.add('checked');
+		}
+	});
+}
+
+function populate(num) {
+	iconClasses = [];
+	clickCount = 0;
+	board.innerHTML = '';
+	//LOGIC IS: shuffle the main array and slice half the number of cards
+	//this is to always get a random selection of icons
+	shuffle(icons);
+	let boardIcons = icons.slice(0, num/2);
+	//duplicate the array values to make pairs and shuffle this new array
+	boardIcons = boardIcons.concat(boardIcons);
+	shuffle(boardIcons);
+	//actually populate HTML
+	const fragment = document.createDocumentFragment();
+	for (let x = 0; x < num; x++) {
+		const cardContainer = document.createElement('div');
+		cardContainer.classList.add('card-container', difficultyClass);
+		const front = document.createElement('div');
+		const back = document.createElement('div');
+		front.classList.add('card', 'front');
+		back.classList.add('card', 'back');
+		const icon = document.createElement('i');
+		icon.classList.add('icon','fas', 'fa-' + boardIcons[x]);
+		back.appendChild(icon);
+		cardContainer.appendChild(front);
+		cardContainer.appendChild(back);
+		fragment.appendChild(cardContainer);
+	}
+	board.appendChild(fragment);
+}
+
+function stopwatch(){
+	sec+=1;
+	if (sec<60) {
+		timer.innerText = sec;
+	} else if (sec<3600) {
+		let minutes = Math.floor(sec/60);
+		let seconds = sec % 60;
+		timer.innerText = minutes+":"+seconds;
+	}
+}
+
+function rating(num) {
+	//star rating differs with difficulty. Allow as many wrong moves as card pairs, and then another 50% to next level. 
+	switch (difficultyClass) {
+		case 'easy' :
+			if (num === 2) {
+				ratingPerfect.classList.add('hide');
+			} else if (num === 3) {
+				ratingAverage.classList.add('hide');
+			};
+			break;
+		case 'normal' :
+			if (num === 8) {
+				ratingPerfect.classList.add('hide');
+			} else if (num === 12) {
+				ratingAverage.classList.add('hide');
+			};
+			break;
+		case 'hard' :
+			if (num === 18) {
+				ratingPerfect.classList.add('hide');
+			} else if (num === 27) {
+				ratingAverage.classList.add('hide');
+			};
+			break;
+	}
+}
+
+function checkwin(num) {
+	//easy won with 2 correct moves, normal with 8 and hard with 18
+	let won;
+	switch (difficultyClass) {
+		case 'easy' :
+			if (num === 2) {
+				won = true;
+			};
+			break;
+		case 'normal' :
+			if (num === 8) {
+				won = true;	
+			};
+			break;
+		case 'hard' :
+			if (num === 18){
+				won = true;
+			};
+			break;
+	};
+	if (won === true) {
+		//wait 1 sec for the cards to flip right side up
+		setTimeout(function(){
+			//fill in and display modal
+			document.getElementById('final-time').innerText = timer.innerText;
+			document.getElementById('final-moves').innerText = moves;
+			document.getElementById('final-rating').innerHTML = document.getElementById('stars').innerHTML;
+			modal.classList.remove('hide');
+			//stop the stopwatch
+			clearInterval(setTimer);
+		}, 1000);
+	}
+}
+
+function matchChecker(e){
+	//LOGIC IS: make sure the click target is a card and prevent doubleclicking 
+	if (e.target.classList.contains('card') && !e.target.classList.contains('front-open')) {
+		//flip the card on click
+		e.target.classList.add('front-open');
+		e.target.nextElementSibling.classList.add('back-open');
+		//keep track of the class of the icons in the clicked cards
+		iconClasses.push(e.target.nextElementSibling.firstChild.classList[2]);
+		//collect the clicked card elements
+		selectedCards.push(e.target);
+		clickCount += 1;
+		//allow only two clicks and then verify the match
+		if (clickCount === 2) {
+			clickCount = 0;
+			//2 clicks make 1 move
+			moves +=1;
+			document.getElementById('moves').innerHTML = moves;
+			//remove the ability to click extra cards for 1 second while the 2 already clicked cards are checked
+			board.removeEventListener('click', matchChecker);
+			setTimeout(function(){
+				board.addEventListener('click', matchChecker);
+			}, 1000);
+			if (iconClasses[0]===iconClasses[1]) {
+				console.log('match');
+				correctMoves += 1;
+				//check if game is won
+				checkwin(correctMoves);
+				iconClasses = [];
+				//add the class 'correct' to keep the matched cards open
+				[].forEach.call(selectedCards, c =>{
+					c.classList.add('front-correct');
+					c.nextElementSibling.classList.add('back-correct');	
+				});
+			} else {
+				console.log('not match');
+				//remove stars if too many wrong moves are made, how many depends on the difficulty
+				wrongMoves +=1;
+				rating(wrongMoves);
+				//wait 1 second before closing mismatching cards, so the player can see what they were
+				setTimeout(function(){
+					iconClasses = [];
+					[].forEach.call(selectedCards, c =>{
+						c.classList.remove('front-open');
+						c.nextElementSibling.classList.remove('back-open');
+						selectedCards = [];
+					});
+				}, 1000);
+			}
+		}
+	}
+}
+
+function startGame() {
+	//cleanup board and reset everything
+	sec = 0; 
+	moves = 0;
+	wrongMoves = 0;
+	correctMoves = 0;
+	timer.innerText = '0';
+	document.getElementById('moves').innerHTML = '0';
+	modal.classList.add('hide');
+	ratingPerfect.classList.remove('hide');
+	ratingAverage.classList.remove('hide');
+	clearInterval(setTimer);
+	//restart game logic
+	checkDifficulty();
+	populate(difficulty);
+	//start the timer on first click
+	board.addEventListener('click', function clickOnce(){
+		clearInterval(setTimer);
+		setTimer = setInterval(stopwatch, 1000);
+		board.removeEventListener('click', clickOnce)
+	});
+}
+
+reset.addEventListener('click', startGame);
+replay.addEventListener('click', startGame);
+form.addEventListener('change', startGame);
+window.addEventListener('click', function(e){
+	if (e.target === modal) {
+		startGame();
+	}
 });
-// Stop game
-stopButton.addEventListener(
-  "click",
-  (stopGame = () => {
-    controls.classList.remove("hide");
-    stopButton.classList.add("hide");
-    startButton.classList.remove("hide");
-    clearInterval(interval);
-  })
-);
-
-const initializer = () => {
-  result.innerText = "";
-  winCount = 0;
-  let cardValues = generateRandom();
-  console.log(cardValues);
-  matrixGenerator(cardValues);
-};
-
+board.addEventListener('click', matchChecker);
+window.addEventListener('load', startGame);

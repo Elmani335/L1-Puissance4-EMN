@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="assets/css/indexcss/header.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/indexcss/header.css">
     <link rel="stylesheet" href="assets/css/indexcss/footer.css">
     <link rel="stylesheet" href="assets/css/indexcss/1.css">
     <link rel="stylesheet" href="assets/css/indexcss/main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
 
     <title><?php echo '.' ?></title>
     <script src="../assets/js/title.js"></script>

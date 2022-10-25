@@ -1,143 +1,237 @@
-.wrapper {
-    box-sizing: content-box;
-    width: 26.87em;
-    padding: 2.5em 2em;
-    background-color: rgb(39, 39, 112);
-    color: hsl(207, 90%, 72%);
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 400px;
-    border-radius: 0.6em;
-    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
-    font-size: 1.2rem;
+html, 
+.bodyJeu {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+    background-color: rgb(59, 59, 172);
 }
 
-.game-container {
-    position: relative;
-    width: 100%;
-    display: grid;
-    gap: 0.6em;
-} 
-
-.stats-container {
-    text-align: right;
-    margin-bottom: 1.2em;
+* {
+	box-sizing: border-box;
 }
 
-.stats-container span {
-    font-weight: 600;
+body {
+	font-family: sans-serif;
+}
+
+h1, 
+h3 {
+	font-family: 'Chicle', cursive;
+	font-size: 5em;
+	text-align: center;
+	color: hsl(207, 90%, 72%);
+}
+
+h3 {
+	font-size: 4em;
+}
+
+
+/*Styles for the dashboard*/
+
+.dashboard {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	color: #545454;
+	font-size: 1.2rem;
+}
+
+.dashboard-element {
+	width: 20%;
+	min-width: 100px;
+	text-align: center;
+}
+
+.dashboard-icon {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+
+#timer, 
+#moves {
+	display: inline-block;
+	line-height: 2rem;
+	width: 5%;
+}
+
+#stars {
+	margin: 0 auto;
+	text-align: center;
+	margin: 3% auto 2%;
+}
+
+.fa-star {
+	color: hsl(207, 90%, 72%);
+}
+
+#reset {
+	cursor: pointer;
+	font-size: 1.5rem;
+	margin: 1%;
+	color: #545454;
+	float: right;
+}
+
+/*Styles for the difficulty select buttons*/
+
+#form {
+	display: flex;
+	justify-content: space-between;
+}
+
+input {
+	display: none;
+}
+
+label {
+	flex: 1;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	line-height: 50px;
+	margin: 0;
+	padding: 0;
+	background:  hsl(207, 90%, 72%);
+	color: #ffffff;
+	box-shadow: inset 0 -7px 9px -7px rgba(0,0,0,0.7);;
+}
+
+label:nth-of-type(2) {
+	margin: 0 1%;
+}
+
+.checked {
+	box-shadow: none;
+}
+
+/*Styles for the game board*/
+
+.container {
+	margin: 0 auto;
+	width: 500px;
+	max-width: 800px;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.game-board {
+	/* gradiend credit uiGradients */
+	background: #aa076b;  
+	background: -webkit-linear-gradient(to bottom, hsl(207, 90%, 72%), #347f8f); 
+	background: linear-gradient(to bottom, hsl(207, 90%, 72%), #347f8f); 
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 3%;
+    
+
 }
 
 .card-container {
-    position: relative;
-    width: 6.25em;
-    height: 6.25em;
-    cursor: pointer;
-  }
+	perspective: 1000px;
+	position: relative;
+	margin: 1%;
+    border: black 4px solid;
+    border-radius: 12%;
+}
 
-.card-before,
-.card-after {
-    position: absolute;
-    border-radius: 5px;
-    width: 100%;
-    height: 100%;
-    display: flex;
+.card {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: #ece9e6; 
+	backface-visibility: hidden;
+	transition: .5s;
+	display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    border: 4px solid black;
-    transition: transform 0.7s ease-out;
-    backface-visibility: hidden;
+    border-radius: 10%;
+    color: #7f7f7f;
 }
 
-.card-before {
-    background-color:hsl(207, 90%, 72%);
-    font-size: 2.8em;
-    font-weight: 600;
+.back {
+	transform: rotateY(180deg);
+	background: #ece9e6; 
 }
 
-.card-after {
-    background-color: hsl(207, 90%, 72%);
-    transform: rotateY(180deg);
-}
-.card-container.flipped .card-before {
-    transform: rotateY(180deg);
+.easy {
+	padding-bottom: 48%;
+	width: 48%;
+	font-size: 3rem;
 }
 
-.card-container.flipped .card-after {
-    transform: rotateY(0deg);
+.normal {
+	padding-bottom: 23%;
+	width: 23%;	
+	font-size: 2rem;
 }
 
-.controls-container {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background-color: hsl(207, 90%, 72%);
-    top: 0;
+.hard {
+	padding-bottom: 14.65%;
+	width: 14.65%;
+	font-size: 1.2rem;
 }
 
-button {
-    border: none;
-    border-radius: 0.3em;
-    padding: 1em 1.5em;
-    cursor: pointer;
-    color: hsl(207, 90%, 72%) ;
-    background-color: rgb(39, 39, 112);
-    border: 4px solid black;
-    margin-bottom: 30px;
+.front-open {
+	transform: rotateY(-180deg);
 }
 
-#stop {
-    font-size: 1.1em;
-    display: block;
-    margin: 1.1em auto 0 auto;
-    background-color: hsl(207, 90%, 72%);
-    color: rgb(39, 39, 112);
-    border: 4px solid black;
+.back-open {
+	transform: rotateX(0deg);
 }
 
-.controls-container button {
-    font-size: 1.3em;
-    box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
+.back-correct {
+	background: #348f50;  
+	background: -webkit-linear-gradient(to top, #56b4d3, #347f8f); 
+	background: linear-gradient(to top, #56b4d3, #347f8f); 
+	transform: rotateX(0deg);
+	color: #f7f7f7;	
+}
+
+.front-correct {
+	transform: rotateY(-180deg);
+}
+
+/*Modal styles*/
+
+.modal {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	padding-top: 20%;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.4);
+}
+
+.modal-inner {
+	background: #f7f7f7;
+	margin: 0 auto;
+	padding: 20px 40px;
+	width: 70%;
+	max-width: 800px; 
+	border-radius: 20px;
+}
+
+.modal-text {
+	text-align: center;
+}
+
+#replay {
+	margin-top: 5%;
+	cursor: pointer;
+	
 }
 
 .hide {
-    display: none;
-}
-
-#result {
-    text-align: center;
-}
-
-#result h2 {
-    font-size: 2.5em;
-}
-
-#result h4 {
-    font-size: 1.8em;
-    margin: 0.6em 0 1em 0;
-} 
-
-.image {
-    width: 100px;
-    height: 100px;
-}
-
-#button-retour-jeu {
-    border: none;
-    border-radius: 0.3em;
-    padding: 1em 1.5em;
-    cursor: pointer;
-    color: hsl(207, 90%, 72%) ;
-    background-color: rgb(39, 39, 112);
-    border: 4px solid black;
-    text-decoration: none;
-    width: 100px;
-    height: 20px;
-    text-align: center;
-    font-size: 1.2rem;
+	display: none;
 }

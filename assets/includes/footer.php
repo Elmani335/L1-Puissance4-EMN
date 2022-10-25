@@ -1,4 +1,3 @@
-
 <footer class="global">
     <div class="row">
 
