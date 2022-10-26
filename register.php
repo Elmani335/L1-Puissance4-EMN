@@ -17,20 +17,20 @@ include_once 'assets/includes/header.php';
 <span class="invalid-feedback-conpass"><?php echo $confirm_password_err; ?></span>
 
 <div class="register_wrapper">
-
-
-
     <p>Sign Up</p>
+
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <div class="form-group">
             <label id="labeluser">Username</label>
             <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>" id="formuser">
-
+            <span class="invalid-feedback-user"><?php echo $username_err; ?></span>
+            
         </div>
         <div class="form-group">
             <label id="labelpass">Password</label>
             <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" id="formpass">
-
+            <span class="invalid-feedback-pass"><?php echo $password_err; ?></span>
+            
         </div>
         <div class="form-group">
             <labelc id="labelconpass">Confirm Password</labelc>
