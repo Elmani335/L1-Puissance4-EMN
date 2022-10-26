@@ -1,0 +1,118 @@
+
+html {
+    font-family: Bahnschrift;
+    background-image: linear-gradient(to right, #ad5389, #3c1053);
+}
+
+body h1 {
+    justify-content: flex-end;
+    display: flex;
+    color: white;
+    margin: 0px 10px 0px 0px;
+}
+body #sdbx {
+    justify-content: flex-end;
+    display: flex;
+    color: white;
+    margin: 0px 10px 0px 0px;
+}
+body .devinette-container {
+    display: flex;
+    justify-content: center;
+    background-color: #3c1053;
+    margin: auto;
+    max-width: 600px;
+    color: white;
+    border-radius: 50px;
+
+}
+
+body .input {
+    display: flex;
+    justify-content: center;
+    background-color: #9926d0;
+    margin: auto;
+    max-width: 400px;
+    border-radius: 20px;
+    border: 1px solid white;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+body .start-button {
+    display: flex;
+    justify-content: center;
+    background-color: #9926d0;
+    margin: auto;
+    max-width: 400px;
+    border-radius: 20px;
+    border: 1px solid white;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+ body .devinette-button {
+     display: flex;
+     justify-content: center;
+     background-color: #9926d0;
+     margin: auto;
+     max-width: 400px;
+     border-radius: 20px;
+     border: 1px solid white;
+     color: #ffffff;
+     font-size: 20px;
+     padding: 10px;
+     margin: 10px;
+ }
+
+
+ .results h2 {
+
+     padding-top: 5px;
+     display: flex;
+     justify-content: center;
+     background-color: #3c1053;
+     margin: 15px auto;
+     max-width: 600px;
+     color: white;
+     border-radius: 20px;
+     border: 1px solid white;
+     color: #ffffff;
+     padding-inline: 10px;
+
+ }
+
+
+ .rslt-container {
+     display: flex;
+     justify-content: center;
+     padding-inline: 10px;
+     margin: 10px;
+ }
+/* centre le text #results */
+ .results {
+     boder: 2px solid white;
+     border-radius: 50px;
+     display: inline-block;
+     justify-content: center;
+     background-color: #3c1053;
+     margin: auto;
+     max-width: 600px;
+     color: white;
+     padding-inline: 10px;
+ }
+
+ .reset {
+     display: flex;
+     justify-content: center;
+     background-color: #9926d0;
+     margin: 10px auto;
+     padding: 10px;
+     max-width: 400px;
+     border-radius: 25px;
+     color: white;
+ }

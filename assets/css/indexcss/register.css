@@ -1,14 +1,27 @@
-h2 {
-    
+p {
+    margin: 10px 30px;
     font-size: 2.5rem;
     text-align: center;
 }
 
-form > p {
+.acc {
     text-align: center;
-    
+    color: #f00;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 0 0 50%;
 }
 
+#btn {
+    background-color: #f00;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 0 0 50%;
+}
 body {
     justify-content: center;
 
@@ -16,9 +29,10 @@ body {
 .register_wrapper {
     margin-right: auto;
     margin-left: auto;
-    width: 400px;
-    display: block;
-    color: hsl(207, 90%, 72%);
+    width: auto;
+    display: flex;
+    border: 2px solid white;
+    color: white;
     font-family: Bahnschrift;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -38,11 +52,18 @@ body {
 }
 
 #labeluser {
-    margin: 10px 5px 5px 10px;
+    margin: 25px 5px 5px 10px;
+    padding: 0px 0px 0px 30%;
 }
 
 #labelpass {
-    margin: 10px 5px 5px 10px;
+    margin: 25px 5px 5px 10px;
+    padding: 0px 0px 0px 30%;
+}
+
+#labelconpass {
+    margin: 25px 5px 5px 10px;
+    padding: 0px 0px 0px 30%;
 }
 
 
@@ -51,35 +72,8 @@ body {
     color: hsl(207, 90%, 72%);
     font-family: Bahnschrift;
     font-size: 20px;
-    
-}
-
-.form-group1 {
-    display: flex;
-    color: hsl(207, 90%, 72%);
-    font-family: Bahnschrift;
-    font-size: 20px;
-    padding-left: 4px;
-}
-
-.form-group2 {
-    display: flex;
-    color: hsl(207, 90%, 72%);
-    font-family: Bahnschrift;
-    font-size: 20px;
-    padding-top: 5px;
-    padding-left: 15px;
-    
-}
-input[type=password] {
-    margin-left: 7px;
-    padding-right: 10px;
-}
-
-.form-group3 {
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
+    margin: 10px 10px 10px 10px;
+    padding: 0px 0px 0px 20%;
 }
 
 .form-submit {
@@ -92,21 +86,31 @@ input[type=password] {
 #formuser {
     background-image: linear-gradient(to right, #0fe4f3, #6c10c5);
     color: #ffffff;
-    padding: 1% 1%;
-    margin: 1% 1%;
+    padding: 10px 10px;
+    margin: 10px 10px;
     border: solid #ffffff;
     border-width: 3px 3px;
-    height: 30px;
 }
+
 #formpass {
     background-image: linear-gradient(to right, #0fe4f3, #6c10c5);
     color: black;
-    padding: 1% 1%;
-    margin: 1% 1%;
+    padding: 10px 10px;
+    margin: 10px 10px;
     border: solid #ffffff;
     border-width: 3px 3px;
-    height: 30px;
+
 }
+
+#formconpass {
+    background-image: linear-gradient(to right, #0fe4f3, #6c10c5);
+    color: black;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    border: solid #ffffff;
+    border-width: 3px 3px;
+}
+
 #subbtn {
     font-weight: bold;
     background-image: linear-gradient(to right, #0fe4f3, #6c10c5);
