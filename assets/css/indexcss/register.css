@@ -1,8 +1,26 @@
 
 
-h2 {
+p {
     margin: 10px 30px;
     font-size: 2.5rem;
+}
+.acc {
+    text-align: center;
+    color: #f00;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 0 0 50%;
+}
+
+#btn {
+    background-color: #f00;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 0 0 50%;
 }
 body {
     justify-content: center;
@@ -11,7 +29,7 @@ body {
 .register_wrapper {
     margin-right: auto;
     margin-left: auto;
-    width: 500px;
+    width: auto;
     display: flex;
     border: 2px solid white;
     color: white;
@@ -30,10 +48,17 @@ body {
 
 #labeluser {
     margin: 25px 5px 5px 10px;
+    padding: 0px 0px 0px 30%;
 }
 
 #labelpass {
     margin: 25px 5px 5px 10px;
+    padding: 0px 0px 0px 30%;
+}
+
+#labelconpass {
+    margin: 25px 5px 5px 10px;
+    padding: 0px 0px 0px 30%;
 }
 
 
@@ -44,6 +69,7 @@ body {
     font-family: Bahnschrift;
     font-size: 20px;
     margin: 10px 10px 10px 10px;
+    padding: 0px 0px 0px 20%;
 }
 
 .form-submit {
@@ -56,19 +82,32 @@ body {
 #formuser {
     background-image: linear-gradient(to right, #0fe4f3, #6c10c5);
     color: #ffffff;
-    padding: 1% 1%;
-    margin: 1% 1%;
+    padding: 10px 10px;
+    margin: 10px 10px;
     border: solid #ffffff;
     border-width: 3px 3px;
+
 }
 #formpass {
     background-image: linear-gradient(to right, #0fe4f3, #6c10c5);
     color: black;
-    padding: 1% 1%;
-    margin: 1% 1%;
+    padding: 10px 10px;
+    margin: 10px 10px;
     border: solid #ffffff;
     border-width: 3px 3px;
+
 }
+
+#formconpass {
+    background-image: linear-gradient(to right, #0fe4f3, #6c10c5);
+    color: black;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    border: solid #ffffff;
+    border-width: 3px 3px;
+
+}
+
 #subbtn {
     font-weight: bold;
     background-image: linear-gradient(to right, #0fe4f3, #6c10c5);

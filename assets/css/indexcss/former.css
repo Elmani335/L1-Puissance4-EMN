@@ -1,0 +1,103 @@
+html {
+
+}
+
+body {
+    background-color: #000000;
+}
+div {
+    color: red;
+}
+form {
+    background-color: #4b4949;
+    color: #ffffff;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+
+}
+input {
+    padding-inline: 10px;
+    margin: 10px auto;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-style: none;
+    border : 1px solid #ffffff;
+    border-radius: 10px;
+}
+select {
+    padding-inline: 10px;
+    margin: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    display: block;
+    border-style: none;
+    border : 1px solid #ffffff;
+    border-radius: 10px;
+
+}
+
+#error {
+    color: #ff0000;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+}
+
+/* css du fieldset */
+fieldset {
+    background-color: #4b4949;
+    color: #ffffff;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+}
+
+/* css du legend */
+legend {
+    background-color: #4b4949;
+    color: #ffffff;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+}
+
+/* css du button */
+button {
+    padding-inline: 10px;
+    margin: 10px auto;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-style: none;
+    border : 1px solid #ffffff;
+    border-radius: 10px;
+}
