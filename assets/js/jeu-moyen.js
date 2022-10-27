@@ -176,7 +176,7 @@ var library = {
                 method: 'POST',
                 body: data
               });
-            } );
+            });
           }
         }
         click = 0;

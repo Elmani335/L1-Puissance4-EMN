@@ -59,6 +59,7 @@ var library = {
   var againElt = document.querySelector("#again");
 
   const form = document.getElementById('form');
+  const button = document.getElementById('button');
   
   
   
@@ -95,22 +96,22 @@ var library = {
         tempElt1 = e.target;
         // timer
         if (click === -1) {
-          timer = setInterval(function() {
+          timer = setInterval(function () {
             time++;
             timeElt.innerHTML = time;
           }, 1000);
         }
         click = 1;
       }
-  
+
       // second click
       else if (e.target !== tempElt1) {
         tempElt2 = e.target;
-  
+
         // different images
         if (tempElt1.firstChild.src !== tempElt2.firstChild.src) {
           mainElt.removeEventListener("click", gameLogic);
-          setTimeout( function() {
+          setTimeout(function () {
             tempElt1.firstChild.classList.add("hidden");
             tempElt2.firstChild.classList.add("hidden");
             mainElt.addEventListener("click", gameLogic);
@@ -120,7 +121,7 @@ var library = {
           }
           scoreElt.innerHTML = score;
         }
-  
+
         // same images
         else {
           score += 10;
@@ -130,7 +131,7 @@ var library = {
           tempElt1.classList.remove("play");
           tempElt2.classList.remove("play");
           scoreElt.innerHTML = score;
-  
+
           // game won
           if (win === 5) {
             clearInterval(timer);
@@ -138,13 +139,20 @@ var library = {
             postElt.classList.remove("hidden");
             console.log(score);
             console.log(time);
+            // envoyer score et temps dans la base de données avec php une fois le jeu terminé
+              button.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const formData = new FormData(form);
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', 'fetchbdd.php');
+                xhr.send(formData);
+              } );
 
-            }
           }
         }
         click = 0;
       }
-
+    }
   }
   
   againElt.addEventListener("click", resetGame);
