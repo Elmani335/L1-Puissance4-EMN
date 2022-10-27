@@ -40,7 +40,7 @@ include_once 'assets/includes/header.php';
             <input type="submit" class="btn btn-primary" value="LOGIN" id="subbtn">
         </div>
         <div class="signup">
-        <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+        <p class="signup1">Don't have an account? <a href="register.php">Sign up now.</a></p>
         </div>
     </form>
 </div>

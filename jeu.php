@@ -14,7 +14,7 @@ include_once 'assets/includes/header.php';
 ?>
 
 	<div class="jeu-choose-difficulty">
-		<p>Choisis ta difficulté :</p>
+		<p><strong>Choisis ta difficulté </strong></p>
 		<li>
 		<a href="assets/jeu/jeu-facile.php">FACILE</a>
 		<a href="assets/jeu/jeu-moyen.php">MOYEN</a>

@@ -65,7 +65,7 @@ body {
 }
 
 .container-contact i:hover {
-    background-color: black;
+    background-color: hsl(221deg 46% 8%);
     color: hsl(207, 90%, 72%);
     border-radius: 10px;
     transition: 0.6s;

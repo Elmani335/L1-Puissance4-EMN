@@ -90,11 +90,21 @@
     color: red;
 }
 
-.signup {
+.signup1 {
     justify-content: center;
     display: flex;
     font-family: Bahnschrift;
     font-size: 20px;
+}
+
+.signup1 a {
+    text-decoration: none;
+    transition: 0.5s;
+    margin-left: 6Px;
+}
+
+.signup1 a:hover {
+    color: hsl(207, 90%, 72%);
 }
 
 .invalid-feedback-user {
