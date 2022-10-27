@@ -136,11 +136,15 @@ var library = {
             clearInterval(timer);
             finalElt.innerHTML = "Tu as gagné ! Ton score est de " + score + " points <br> Ton temps est de " + time + " secondes";
             postElt.classList.remove("hidden");
+            console.log(score);
+            console.log(time);
+
+            }
           }
         }
         click = 0;
       }
-    }
+
   }
   
   againElt.addEventListener("click", resetGame);

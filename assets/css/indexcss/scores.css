@@ -21,7 +21,7 @@ body {
 
 .styled-table th,
 .styled-table td {
-    padding: 15px 150px;
+    padding: 15px 100px;
 }
 
 .styled-table tbody tr {
@@ -50,3 +50,8 @@ body {
     color: #ffffff;
     /* COULEUR DE LA PERSONNE NORMAL */
 }
+
+
+/* un joli css pour le bouton de refresh avec des coin arrondi  */
+
+

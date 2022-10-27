@@ -166,6 +166,17 @@ var library = {
             clearInterval(timer);
             finalElt.innerHTML = "Tu as gagné ! Ton score est de " + score + " points <br> Ton temps est de " + time + " secondes";
             postElt.classList.remove("hidden");
+            console.log(score);
+            console.log(time);
+            // enregistrement du score sur bdd
+            form.addEventListener('submit', (e) => {
+              e.preventDefault();
+              const data = new FormData(form);
+              fetch('scores.php', {
+                method: 'POST',
+                body: data
+              });
+            } );
           }
         }
         click = 0;

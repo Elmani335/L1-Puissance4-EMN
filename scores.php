@@ -21,26 +21,24 @@ include_once 'assets/includes/header.php';
     <tr>
       <th>Name</th>
       <th>Points</th>
+        <th>Time</th>
     </tr>
     </thead>
     <tbody>
-    <tr  class="active">
-      <td>Elman</td>
-      <td>Infinite</td>
-    </tr>
-    <tr class="normal">
-      <td>Pierre</td>
-      <td>5150</td>
-    </tr>
-    <tr class="normal">
-      <td>Roger</td>
-      <td>1473</td>
-    </tr>
-    <tr class="normal">
-      <td>Jack</td>
-      <td>3524</td>
-    </tr>
-    <!-- and so on... -->
+    <!-- tableau qui prend les donné du tableau scores de la bdd -->
+    <?php
+    $conn = mysqli_connect("localhost", "root", "", "website");
+    $sql = "SELECT * FROM scores ORDER BY points DESC LIMIT 5";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+      while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr><td>" . $row['username'] . "</td><td>" . $row['points'] . " pts" . "</td><td>" . $row['timer'] . " sec" . "</td></tr>";
+      }
+    }
+
+    ?>
+
     </tbody>
   </table>
 
