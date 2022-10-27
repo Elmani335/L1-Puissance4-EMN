@@ -16,11 +16,12 @@ include_once 'assets/includes/header.php';
 	<div class="jeu-choose-difficulty">
 		<p><strong>Choisis ta difficulté </strong></p>
 		<li>
-		<a href="assets/jeu/jeu-facile.php">FACILE</a>
-		<a href="assets/jeu/jeu-moyen.php">MOYEN</a>
-		<a href="assets/jeu/jeu-difficile.php">DIFFICILE</a>
+		<a class="btn btn-white btn-animated" href="assets/jeu/jeu-facile.php">FACILE</a>
+		<a class="btn btn-white1 btn-animated" href="assets/jeu/jeu-moyen.php">MOYEN</a>
+		<a class="btn btn-white2 btn-animated" href="assets/jeu/jeu-difficile.php">DIFFICILE</a>
 		</li>
 	</div>
+
 <?php
 include_once 'assets/includes/footer.php';
 ?>

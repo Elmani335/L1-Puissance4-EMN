@@ -68,6 +68,7 @@
           <li>
           <a href="jeu-facile.php">Facile</a>
           <a href="jeu-moyen.php">Moyen</a>
+          <a href="../../index.php">Retour a l'index</a>
           </li>
           
         </div>

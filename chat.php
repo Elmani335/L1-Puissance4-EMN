@@ -11,8 +11,8 @@ include_once 'assets/includes/header.php';
 <div class="chat">
     <div id="wrapperchat">
         <div id="menuchat">
-            <p class="welcome">Welcome, <b></b></p>
-            <p class="logout"><a id="exit" href="index.php">Exit Chat</a></p>
+            <p class="welcome"><strong> WELCOME </strong><b></b></p>
+            <p class="logout"><a id="exit" href="index.php">EXIT CHAT</a></p>
         </div>
 
         <div id="chatbox"></div>

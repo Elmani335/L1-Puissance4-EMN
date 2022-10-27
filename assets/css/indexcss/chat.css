@@ -1,16 +1,9 @@
-h1 {
-    font-size: 50px;
-    color: #ffffff;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 .welcome {
     font-size: 40px;
     text-align: center;
-    color: white;
+    color:hsl(207, 90%, 72%) ;
     font-family: Bahnschrift;
+    margin-top: 60px;
 }
 
 form {
@@ -20,6 +13,7 @@ form {
     gap: 5px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 90px;
 }
 
 form label {
@@ -46,7 +40,6 @@ a:hover {
     font-weight: bold;
     font-family: Bahnschrift;
     margin: 50px auto;
-    padding-bottom: 0px;
     background-image: linear-gradient(60deg, #3353d3, #220f4b);
     max-width: 100%;
     border-radius: 50px;
@@ -86,6 +79,7 @@ a:hover {
     border: 1px solid #000000;
     font-size: 1.2rem;
     font-family: Bahnschrift;
+    
 }
 
 #name {
@@ -96,13 +90,22 @@ a:hover {
 
 #submitmsg,
 #enter{
-    background: #000000;
-    border: 2px solid #ffffff;
-    color: #ffffff;
+    background: hsl(221deg 46% 8%);
+    border: 2px solid hsl(207, 90%, 72%);
+    color: hsl(207, 90%, 72%);
     padding: 4px 10px;
     font-weight: bold;
     border-radius: 4px;
     font-family: Bahnschrift;
+    cursor: pointer;
+
+}
+
+#submitmsg:hover,
+#enter:hover {
+    background-color:hsl(207, 90%, 72%) ;
+    color:hsl(221deg 46% 8%);
+    border: 2px solid hsl(221deg 46% 8%);
 }
 
 .error {
@@ -121,8 +124,8 @@ a:hover {
 }
 
 a#exit {
-    color: white;
-    background: #c62828;
+    color: hsl(221deg 46% 8%);
+    background: hsl(207, 90%, 72%);
     padding: 12px 10px;
     border-radius: 4px;
     margin-right: auto;
@@ -131,6 +134,14 @@ a#exit {
     justify-content: center;
     display: flex;
     max-width: 100px;
+    text-decoration: none;
+    border: 3px solid hsl(207, 90%, 72%) ;
+    margin-bottom: 40px;
+}
+a#exit:hover {
+    color: hsl(207, 90%, 72%) ;
+    background-color: hsl(221deg 46% 8%);
+    border: 3px solid hsl(207, 90%, 72%) ;
 }
 
 .msgln {
