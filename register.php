@@ -12,12 +12,8 @@ include_once 'assets/includes/header.php';
 
 <body>
 
-<span class="invalid-feedback-user"><?php echo $username_err; ?></span>
-<span class="invalid-feedback-pass"><?php echo $password_err; ?></span>
-<span class="invalid-feedback-conpass"><?php echo $confirm_password_err; ?></span>
-
 <div class="register_wrapper">
-    <p>Sign Up</p>
+    <p id="signUp">Sign Up</p>
 
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <div class="form-group">
@@ -33,7 +29,7 @@ include_once 'assets/includes/header.php';
             
         </div>
         <div class="form-group">
-            <labelc id="labelconpass">Confirm Password</labelc>
+            <label id="labelconpass" class="labelconpass">Confirm Password</label>
             <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>" id="formconpass">
 
         </div>
@@ -41,7 +37,7 @@ include_once 'assets/includes/header.php';
             <input type="submit" class="btn btn-primary" value="Submit" id="btn">
             <input type="reset" class="btn btn-secondary ml-2" value="Reset" id="btn">
         </div>
-        <p class="acc">Already have an account? <a href="login.php">Login here</a>.</p>
+        <p class="acc">Already have an account? <a href="login.php"> Login here</a>.</p>
     </form>
 </div>
 </body>
