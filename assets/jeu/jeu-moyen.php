@@ -69,6 +69,7 @@
           <br>
           <p>
             <a id="again">Joue encore !</a>
+              <a id="home" href="../../index.php"><button id="home">HOME</button></a>
           </p>
         </div>
       </section>

@@ -58,8 +58,6 @@ var library = {
   var finalElt = document.querySelector("#final");
   var againElt = document.querySelector("#again");
 
-  const form = document.getElementById('form');
-  const button = document.getElementById('button');
   
   
   
@@ -139,14 +137,7 @@ var library = {
             postElt.classList.remove("hidden");
             console.log(score);
             console.log(time);
-            // envoyer score et temps dans la base de données avec php une fois le jeu terminé
-              button.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const formData = new FormData(form);
-                const xhr = new XMLHttpRequest();
-                xhr.open('POST', 'fetchbdd.php');
-                xhr.send(formData);
-              } );
+            // enregistrement du score sur bdd
 
           }
         }
@@ -154,6 +145,7 @@ var library = {
       }
     }
   }
+
   
   againElt.addEventListener("click", resetGame);
   

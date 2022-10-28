@@ -169,14 +169,7 @@ var library = {
             console.log(score);
             console.log(time);
             // enregistrement du score sur bdd
-            form.addEventListener('submit', (e) => {
-              e.preventDefault();
-              const data = new FormData(form);
-              fetch('scores.php', {
-                method: 'POST',
-                body: data
-              });
-            });
+
           }
         }
         click = 0;
